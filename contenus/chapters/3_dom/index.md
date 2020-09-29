@@ -10,9 +10,9 @@ La plupart des entités du DOM sont des éléments. Mais ces éléments hériten
 
 Être vivant -> Mammifère -> Humain
 
-EventListener -> Node -> Element
+EventTarget -> Node -> Element
 
-Les `element` sont des `nodes`, mais pas l'inverse, les `nodes` sont des `event listeners`, mais pas l'inverse.
+Les `element` sont des `nodes`, mais pas l'inverse, les `nodes` sont des `event targets`, mais pas l'inverse.
 
 ## [Node](https://developer.mozilla.org/fr/docs/Web/API/Node)
 
@@ -26,6 +26,8 @@ n.remove();
 n.replaceWith(n2);
 ```
 
+Tant qu'un noeud n'est pas "accroché" au <body>, (via éventuellement des noeuds intermédiaires), il ne sera pas affiché à l'écran.
+
 ## [Document](https://developer.mozilla.org/fr/docs/Web/API/Document)
 
 Le document est un noeud spécial.
@@ -38,6 +40,7 @@ document.body; // renvoie le body
 const maDiv = document.createElement('div'); // crée une div orpheline
 const monSvg = document.createElementNS('http://www.w3.org/2000/svg', 'g'); // pour le SVG
 
+const myElement = document.getElementById('myId'); // renvoie l'élément qui a l'id 'myId'
 const found = document.querySelector(selector); // renvoie le premier élément correspondant de la page
 const founds = document.querySelectorAll(selector); // renvoie un iterateur avec tous les éléments de la page correspondant
 ```

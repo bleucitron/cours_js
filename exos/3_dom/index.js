@@ -2,29 +2,6 @@
 
 // # 4_DOM
 
-/*
-  Pense-bête DOM
-  // accéder au <body>
-  document.body
-
-  // créer un nouvel élément 'div'
-  const x = document.createElement('div');
-
-  // rajouter un enfant
-  parentEl.append(enfantEl);
-
-  // ajouter un texte à un élément
-  element.textContent = 'le texte yo !';
-
-  // échanger des éléments
-  element1.replaceWith(element2);
-
-  // ajouter un listener à un élément
-  element.addEventListener('click', function(e) {
-    ...
-  })
-*/
-
 /* Exercice 1: Couleurs
     - Créer une <div> pour chaque couleur, avec la couleur en textContent, et l'ajouter à l'élément avec l'id 'exo1'
     - Chaque div doit avoir un fond coloré de sa couleur
@@ -61,6 +38,8 @@ const names = ['Harry', 'Hermione', 'Ron', 'Sirius', 'Hagrid', 'Albus'];
     - Lui ajouter un listener qui active/désactive le tracking
     de la position de la souris dans la fenêtre (event.clientX, event.clientY)
 */
+
+// -------------------------------
 
 /* Exercice Bonus: Click and drag
     - Créer une <section> avec l'id 'exo5', et l'ajouter au body

@@ -69,8 +69,10 @@ uneDate.getFullYear();
 aujourdHui - uneDate; // soustrait les dates, renvoie un entier en millisecondes
 ```
 
+---
+
 # _**À vos claviers !!!**_
 
-- Ouvrir le dossier `/exos/beginner/4_dom`
+- Ouvrir le dossier `/exos/2_syntax`
 - Ouvrir le fichier `index.html` dans votre navigateur
 - Suivre les indications du fichier `index.js`, et vérifier les résultats dans votre navigateur
