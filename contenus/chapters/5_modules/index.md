@@ -23,7 +23,7 @@ On peut "importer" des scripts dans les HTML, via les balises `<script>`, soit e
 
 # **_À vos claviers !!!_**
 
-Dans le dossier `src/vanilla`, créer plusieurs fichiers avec du code
+Dans le dossier `src`, créer plusieurs fichiers avec du code
 
 - `createTweetLi.js`
 - `createTweetsOl.js`
@@ -57,11 +57,14 @@ On peut exporter des valeurs, des objets, des fonctions...
 
 ```js
 // export par défaut, n'a pas besoin de nom
+export default { a: 1, b: 2 };
+
+// marche aussi pour les fonctions
 export default function () {
-  // ....
+  console.log('Coucou');
 }
 
-export const maConst = 5; // export
+export const maConst = 5; // export secondaire
 ```
 
 ### [`import`](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Instructions/import)
@@ -124,8 +127,8 @@ npm init -y
 npm install browserify watchify --save-dev
 npm i babelify @babel/core @babel/preset-env --save-dev
 
-npx browserify src/advanced/main.js -o bundle.js -t [ babelify --presets [ @babel/env ] ] -d
-# npx watchify src/advanced/main.js -o bundle.js -t [ babelify --presets [ @babel/env ] ] -d -v
+npx browserify src/index.js -o bundle.js -t [ babelify --presets [ @babel/env ] ] -d
+# npx watchify src/index.js -o bundle.js -t [ babelify --presets [ @babel/env ] ] -d -v
 ```
 
 ### Étape 3: changer le HTML
