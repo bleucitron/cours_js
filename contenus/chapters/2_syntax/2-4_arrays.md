@@ -119,4 +119,4 @@ const applati = array.flat(); // [1, 2, 3, 4]
 const extrait = array.slice(2, 5); // [3, 4, 5]
 ```
 
-## À suivre: [DOM](./2-5_utils.md)
+## À suivre: [Quelques petites choses en plus](./2-5_utils.md)
