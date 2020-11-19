@@ -1,26 +1,29 @@
 'use strict';
 
-// # 5_Asynchrone
+// Asynchrone
 
-/* Exercice 1: Random number
-    - Vous avez accès à une fonction createRandomNumber() qui crée une Promesse d'avoir un nombre aléatoire en 0 et 100.
-    - Utiliser cette fonction pour récupérer le nombre
-    - Si ce nombre est plus grand que 50, afficher "Cool !"
-    - Sinon, afficher "Pas cool..."
+console.log('--- Question 1 ---');
+/* créer une Promesse qui renvoie un nombre aléatoire au bout de 2 secondes.
+  Si ce nombre est pair, le résoudre, sinon le rejeter.
+
+  Utiliser setTimeout().
 */
 
-/* Exercice 2: Temps d'attente
-    - Vous avez accès à une fonction waitForNumber() qui crée une Promesse d'attendre un certain temps.
-    - Si ce temps est trop long, la Promesse est rejetée, sinon elle est résolue avec le temps d'attente.
-    - Utiliser cette fonction pour afficher le temps d'attente lorsque la Promesse est résolue.
-    - Tant que la Promesse est rejetée, recommencez
-    - Essayer de trouver quel est le temps d'attente maximal
+console.log('--- Question 2 ---');
+/* Consommer la Promesse de 1) pour
+  - afficher le nombre renvoyé quand elle résoud
+  - logguer un message d'erreur quand elle est rejetée
 */
 
-/* Exercice 3: Charger des tweets
-    - Vous avez accès à une URL qui contient des tweets.
-    - Charger et logguer les tweets en utilisant fetch()
+console.log('--- Question 4 ---');
+/* Écrire une fonction getJson() qui prend une URL en entrée,
+  et renvoie la Promesse de récupérer la réponse HTTP transformée en JSON
 */
 
-const url =
-  'https://raw.githubusercontent.com/iOiurson/data/master/data/tweets.json';
+console.log('--- BONUS ---');
+/* Créer une Promesse qui:
+  - crée un nombre aléatoire (delay) en 0 et 5000
+  - au bout de 2s, rejeter la Promesse avec le texte 'Trop long...'
+  - au bout de delay ms pour résoudre le nombre delay
+  - consommer la Promesse de sorte que si elle est rejetée, on recommence jusqu'à ce qu'elle résolve
+*/
