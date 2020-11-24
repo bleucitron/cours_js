@@ -90,7 +90,7 @@ Tout est un `EventTarget`. Un `EventTarget` écoute les évènements qui se prod
 ```js
 n.addEventListener(type, listener, options); // si l'évèvement type se produit sur n, alors exécute listener, avec des options
 n.removeEventListener(type, listener); // attention, comparaison par référence
-n.dispatchEvent(e); // génére un évènement custom
+
 // Exemple
 monElement.addEventListener(
   'click',
@@ -124,13 +124,10 @@ Ils sont uniques par élément.
 ```js
 element.addEventListener('click', function (e) {
   e.target; // renvoie l'élément qui a généré l'évènement
-  e.currentTarget; // renvoie l'élément courant lors de la traversée du DOM
   e.timestamp; // renvoie la date de l'évènement en ms depuis le chargement de la page
-  e.preventDefault(); // empêche les comportements par défaut
   e.clientX; // renvoie la position X de la souris
   e.clientY; // renvoie la position Y de la souris
-  e.bubbles; // renvoie true si l'évènement remonte l'arbre, false s'il descend
-  e.stopPropagation(); // arrête la propagation de l'évènement
+  e.preventDefault(); // empêche les comportements par défaut
 });
 ```
 
