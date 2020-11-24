@@ -24,7 +24,7 @@ Il est également possible d'inverser des valeurs booléennes, avec `!`.
 const x = 3;
 
 const isPositive = x >= 0; // true
-const isNegative = !x; // false
+const isNegative = !isPositive; // false
 ```
 
 ## "Falsy"

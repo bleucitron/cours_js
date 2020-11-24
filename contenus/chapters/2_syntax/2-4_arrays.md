@@ -18,7 +18,7 @@ Il y a plusieurs manières d'itérer sur un tableau.
 ```js
 const array = [1, 2, 3];
 
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i < array.length; i++) {
   // à l'ancienne
   console.log(array[i]);
 }
@@ -48,7 +48,7 @@ De manière illustrée, ça donne [ça](https://twitter.com/steveluscher/status/
 const array = [1, 2, 3, 4];
 
 array.forEach(function (element, index, arr) {
-  // les arguments i et a sont optionnels
+  // les arguments index et arr sont optionnels
   console.log(element * index);
 });
 
