@@ -90,11 +90,39 @@ console.log(pokemons.pikachu);
 
 **Les modules sont par défaut en mode strict !**
 
-## Bundling
+### Utiliser un module
+
+Pour pouvoir utiliser un script de type module dans le HTML, il faut l'insérer dans un `<script>` de type `"module"`.
+
+Toutes les dépendances d'un script `"module"` seront directement importées en suivant l'arbre de dépendances construit avec les différents `import` et `export`.
+
+**Lorsque l'on utilise les modules, il faut impérativement servir sa page depuis un serveur HTTP (et non depuis le protocole `file://`).**
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="code1.js" type="module"></script>
+  </head>
+  <body></body>
+</html>
+```
+
+# **_À vos claviers !!!_**
+
+Ouvrez le fichier `index.html` avec [VS Code LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+Puis utiliser les syntaxes `import` et `export` pour reconstruire votre arbre de dépendances, et retrouver votre code fonctionnel.
+
+---
+
+## Aller plus loin
+
+Le développement web moderne s'appuie énormément sur le concept de "bundling", dont le principe est le suivant:
 
 On "compile" tout le code en 1 seul (gros) fichier bien construit pour le charger dans le Html.
 
-Il y a plusieurs alternatives disponibles.
+Pour mettre en place du bundling, il y a plusieurs alternatives disponibles.
 
 - [`browserify`](http://browserify.org/)
 - [`webpack`](https://webpack.js.org/)
@@ -103,73 +131,6 @@ Il y a plusieurs alternatives disponibles.
 
 Ces outils nécessitent de travailler dans un environnement Node, puis de transformer le code Node en un code compatible navigateur.
 
-Pour utiliser ces outils, il faut donc [installer Node](https://nodejs.org/en/) et un gestionnaire de paquets, [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/en/).
+Pour utiliser ces outils, il est donc nécessaire d'[installer Node](https://nodejs.org/en/) et un gestionnaire de paquets, [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/en/).
 
----
-
-# **_À vos claviers !!!_**
-
-On va utiliser [`browserify`](http://browserify.org/).
-
-### Étape 1: [installer NodeJS](https://nodejs.org/en/)
-
-```bash
-# vérifier la version
-node -v
-npm -v
-```
-
-### Étape 2: installer Browserify et Babel
-
-```bash
-# dans le dossier projet :
-npm init -y
-npm install browserify watchify --save-dev
-npm i babelify @babel/core @babel/preset-env --save-dev
-
-npx browserify src/index.js -o bundle.js -t [ babelify --presets [ @babel/env ] ] -d
-# npx watchify src/index.js -o bundle.js -t [ babelify --presets [ @babel/env ] ] -d -v
-```
-
-### Étape 3: changer le HTML
-
-Enlever tous les `<script>` et les remplacer par `<script defer src="bundle.js"></script>`
-
-### Étape 4: utiliser `import`/`export` dans nos scripts
-
-`main.js`
-
-```js
-import createTweetsOl from './createTweetsOl.js';
-import createTimeButton from './createTimeButton.js';
-
-document.addEventListener('DOMContentLoaded', function () {
-  // ... createTweetsOl() ...
-  // ... createTimeButton() ...
-});
-```
-
-`createTweetsOl.js`
-
-```js
-export default function (tweets) {
-  // ...
-}
-```
-
-### Étape 5: ajouter les infos de la date avec [MomentJS](https://momentjs.com/)
-
-```bash
-npm install moment
-```
-
-```js
-import moment from 'moment';
-
-// chercher dans la doc pour afficher depuis quand le tweet a été envoyé
-// ...
-```
-
-### Étape 6: ajouter les infos d'auteur
-
-et styliser le tout avec des classes
+Toutes ces techniques sortent largement du cadre de ce cours, mais sont intéressantes à étudier si l'on veut aller plus loin dans le développement web avec Javascript.
