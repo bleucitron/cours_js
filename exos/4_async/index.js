@@ -15,9 +15,15 @@ console.log('--- Question 2 ---');
   - logguer un message d'erreur quand elle est rejetée
 */
 
+console.log('--- Question 3 ---');
+/* Créer une promesse en utilisant fetch(), et la consommer pour afficher la donnée contenue dans l'url ci-dessous:
+ */
+const url =
+  'https://raw.githubusercontent.com/iOiurson/data/master/data/tweets.json';
+
 console.log('--- Question 4 ---');
 /* Écrire une fonction getJson() qui prend une URL en entrée,
-  et renvoie la Promesse de récupérer la réponse HTTP transformée en JSON
+  et renvoie la Promesse de récupérer la réponse HTTP parsée depuis du JSON
 */
 
 console.log('--- BONUS ---');
