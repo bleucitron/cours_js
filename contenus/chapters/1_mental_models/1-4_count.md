@@ -1,10 +1,13 @@
 # Combien de valeurs ?
 
-_Basé sur [Just Javascript](https://justjavascript.com/), de [Dan Abramov](https://twitter.com/dan_abramov)._
+_Basé sur [Just Javascript](https://justjavascript.com/), de
+[Dan Abramov](https://twitter.com/dan_abramov)._
 
 Compter les valeurs n'a pas d'intérêt en soi.
 
-En revanche, l'exercice permet de réfléchir à ce qui distingue les valeurs entre elles, et donc de commencer à aborder la notion d'égalité, si particulière en Javascript.
+En revanche, l'exercice permet de réfléchir à ce qui distingue les valeurs entre
+elles, et donc de commencer à aborder la notion d'égalité, si particulière en
+Javascript.
 
 - Undefined
 - Null
@@ -26,9 +29,11 @@ console.log(typeof undefined); // 'undefined'
 
 `undefined` est l'unique valeur de type `'undefined'`.
 
-Elle représente l'absence accidentelle de valeur, mais c'est bien une valeur en elle-même.
+Elle représente l'absence accidentelle de valeur, mais c'est bien une valeur en
+elle-même.
 
-On peut écrire explicitement `undefined`, comme `undefined` peut apparaître naturellement.
+On peut écrire explicitement `undefined`, comme `undefined` peut apparaître
+naturellement.
 
 ```js
 let a;
@@ -39,7 +44,8 @@ b = undefined;
 console.log(b); // undefined
 ```
 
-⚠ Malgré son nom, `undefined` ne signifie pas qu'une variable n'est pas définie, mais qu'elle n'a pas de valeur.
+⚠ Malgré son nom, `undefined` ne signifie pas qu'une variable n'est pas définie,
+mais qu'elle n'a pas de valeur.
 
 ```js
 console.log(a); // ReferenceError
@@ -52,7 +58,8 @@ let a;
 
 `null` est l'unique valeur de type `'null'`.
 
-Dan Abramov parle de la "petite soeur" d'`undefined`, car elle fonctionne de manière très similaire.
+Dan Abramov parle de la "petite soeur" d'`undefined`, car elle fonctionne de
+manière très similaire.
 
 ⚠ Dû à un bug historique, `null` se prend pour un objet.
 
@@ -68,7 +75,8 @@ Elle représente l'absence intentionnelle de valeur.
 
 À la différence d'`undefined`, `null` n'apparaît jamais naturellement.
 
-On peut voir `undefined` comme la conséquence d'une erreur de code, et `null` comme une "vraie" absence de valeur.
+On peut voir `undefined` comme la conséquence d'une erreur de code, et `null`
+comme une "vraie" absence de valeur.
 
 Il s'agit toutefois d'une convention.
 
@@ -111,9 +119,11 @@ Il y en a 18 437 736 874 454 812 624.
 console.log(0.1 + 0.2 === 0.3); // ??
 ```
 
-Ce "problème" n'est pas lié à Javascript, mais à l'impossibilité physique de représenter l'infinité des nombres mathématiques.
+Ce "problème" n'est pas lié à Javascript, mais à l'impossibilité physique de
+représenter l'infinité des nombres mathématiques.
 
-Les ordinateurs utilisent donc les [Maths à virgule flottante](https://fr.wikipedia.org/wiki/Virgule_flottante).
+Les ordinateurs utilisent donc les
+[Maths à virgule flottante](https://fr.wikipedia.org/wiki/Virgule_flottante).
 
 Plus on est proche de zéro, plus on peut être précis.
 
@@ -135,7 +145,8 @@ let c = -a; // -Infinity
 let d = 1 / c; // -0
 ```
 
-`NaN` , ou _Not A Number_, représente le résultat d'une opération mathématique impossible, mais est bien un `'number'`, malgré son nom.
+`NaN` , ou _Not A Number_, représente le résultat d'une opération mathématique
+impossible, mais est bien un `'number'`, malgré son nom.
 
 Une `'string'` n'est pas `NaN`, un `'object'` n'est pas `NaN`...
 
@@ -149,7 +160,8 @@ C'est un type récent, qui sert à représenter des entiers très grands.
 console.log(typeof 1n); // 'bigint'
 ```
 
-On peut alors calculer précisement des entiers plus grands qu'avec des `'number'`, ce qui sert surtout en finance.
+On peut alors calculer précisement des entiers plus grands qu'avec des
+`'number'`, ce qui sert surtout en finance.
 
 ```js
 let alot = 9007199254740991n;
@@ -166,18 +178,19 @@ Dans la vraie vie, on peut très bien se contenter de `'number'`.
 `coucou`
 
 ```js
-console.log(typeof 'romain'); // 'string'
-console.log(typeof ''); // 'string'
+console.log(typeof "romain"); // 'string'
+console.log(typeof ""); // 'string'
 ```
 
 Le type `'string'` représente du texte, quel que soit sa taille.
 
-Il y a potentiellement autant de `'string'` que de textes possibles. Dans notre univers, on va considérer que c'est le cas.
+Il y a potentiellement autant de `'string'` que de textes possibles. Dans notre
+univers, on va considérer que c'est le cas.
 
 Les strings ne sont pas des objets, même si on en a parfois l'impression.
 
 ```js
-let hey = 'Salut';
+let hey = "Salut";
 console.log(hey[0]); // 'S'
 ```
 
@@ -210,16 +223,17 @@ On peut les modifier depuis notre code.
 Les objets ont des _propriétés_, auxquelles on peut accéder avec `[]` ou `.`:
 
 ```js
-let rapper = { name: 'Michel' };
-rapper.name = 'Mike'; // Dot notation
-rapper['name'] = 'Mitch'; // Bracket notation
+let rapper = { name: "Michel" };
+rapper.name = "Mike"; // Dot notation
+rapper["name"] = "Mitch"; // Bracket notation
 ```
 
 _On reparlera des propriétés plus tard._
 
 ### On peut créer des objets
 
-À la différence des valeurs primitives, **les objets peuvent être créés de toutes pièces.** Une nouvelle valeur est créée à chaque nouvel objet.
+À la différence des valeurs primitives, **les objets peuvent être créés de
+toutes pièces.** Une nouvelle valeur est créée à chaque nouvel objet.
 
 ```js
 let luke = {}; // une valeur
@@ -234,7 +248,8 @@ Les moteurs Javascript ont un "garbage collector". Ou "ramasse-miettes".
 
 Il s'occupe tout seul de la gestion de sa mémoire interne.
 
-Si un objet n'a plus de câble qui le retient à notre planète, il finira par être détruit.
+Si un objet n'a plus de câble qui le retient à notre planète, il finira par être
+détruit.
 
 ```js
 let evier = {};
@@ -249,17 +264,19 @@ evier = null;
 console.log(typeof function () {}); // 'function'
 ```
 
-Les fonctions contiennent du code, mais sont des valeurs à part entière, au même titre que les objets.
+Les fonctions contiennent du code, mais sont des valeurs à part entière, au même
+titre que les objets.
 
 Elles sont un peu comme des lunes autour de notre planète.
 
-De même que pour les objets, on peut créer des valeurs de type `'function'`, mais pas les détruire.
+De même que pour les objets, on peut créer des valeurs de type `'function'`,
+mais pas les détruire.
 
 ### Exécuter une fonction
 
 ```js
 let makeCake = function () {
-  return 'chocolate pie';
+  return "chocolate pie";
 };
 
 let cake = makeCake; // la fonction n'est pas exécutée
@@ -271,12 +288,15 @@ console.log(pie);
 
 `makeCake` est une expression, qui pointe vers la valeur fonction.
 
-`makeCake()` est une expression, qui demande la valeur renvoyée par l'éxecution de la fonction vers laquelle pointe `makeCake`.
+`makeCake()` est une expression, qui demande la valeur renvoyée par l'éxecution
+de la fonction vers laquelle pointe `makeCake`.
 
 ## En bref
 
-**Le nombre de valeurs primitives est fixé**, et sera toujours le même quel que soit notre code.
+**Le nombre de valeurs primitives est fixé**, et sera toujours le même quel que
+soit notre code.
 
-**Le nombre de valeurs objets ou fonctions varie** au cours du temps, selon que votre code en crée, ou que le ramasse-miette en détruit.
+**Le nombre de valeurs objets ou fonctions varie** au cours du temps, selon que
+votre code en crée, ou que le ramasse-miette en détruit.
 
 #### _La suite: [Égalité(s) des valeurs](./1-5_equality.md)_

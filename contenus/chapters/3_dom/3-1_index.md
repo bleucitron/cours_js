@@ -2,17 +2,22 @@
 
 Une page HTML est un arbre grosso modo composée de noeuds et d'élements.
 
-Le DOM est une API pour manipuler un document HTML ou XML (arbre). Souvent, parlant de DOM, on désigne indifféremment l'arbre HTML ou l'API DOM.
+Le DOM est une API pour manipuler un document HTML ou XML (arbre). Souvent,
+parlant de DOM, on désigne indifféremment l'arbre HTML ou l'API DOM.
 
 [L'essentiel](https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction#Interfaces_essentielles_du_DOM)
 
-La plupart des entités du DOM sont des éléments. Mais ces éléments héritent de propriétés d'autres entités, comme les noeuds, ou les écouteurs. Cela est similaire à la façons dont les humains héritent des propriétés des mammifères, etc...
+La plupart des entités du DOM sont des éléments. Mais ces éléments héritent de
+propriétés d'autres entités, comme les noeuds, ou les écouteurs. Cela est
+similaire à la façons dont les humains héritent des propriétés des mammifères,
+etc...
 
 Être vivant -> Mammifère -> Humain
 
 EventTarget -> Node -> Element
 
-Les `element` sont des `nodes`, mais pas l'inverse, les `nodes` sont des `event targets`, mais pas l'inverse.
+Les `element` sont des `nodes`, mais pas l'inverse, les `nodes` sont des
+`event targets`, mais pas l'inverse.
 
 ## [Node](https://developer.mozilla.org/fr/docs/Web/API/Node)
 
@@ -26,21 +31,23 @@ n.remove();
 n.replaceWith(n2);
 ```
 
-Tant qu'un noeud n'est pas "accroché" au <body>, (via éventuellement des noeuds intermédiaires), il ne sera pas affiché à l'écran.
+Tant qu'un noeud n'est pas "accroché" au <body>, (via éventuellement des noeuds
+intermédiaires), il ne sera pas affiché à l'écran.
 
 ## [Document](https://developer.mozilla.org/fr/docs/Web/API/Document)
 
 Le document est un noeud spécial.
 
-Il englobe tous les noeuds/éléments de la page, permet de rechercher des éléments, de les créer, de les ajouter à la page.
+Il englobe tous les noeuds/éléments de la page, permet de rechercher des
+éléments, de les créer, de les ajouter à la page.
 
 ```js
 document.body; // renvoie le body
 
-const maDiv = document.createElement('div'); // crée une div orpheline
-const monSvg = document.createElementNS('http://www.w3.org/2000/svg', 'g'); // pour le SVG
+const maDiv = document.createElement("div"); // crée une div orpheline
+const monSvg = document.createElementNS("http://www.w3.org/2000/svg", "g"); // pour le SVG
 
-const myElement = document.getElementById('myId'); // renvoie l'élément qui a l'id 'myId'
+const myElement = document.getElementById("myId"); // renvoie l'élément qui a l'id 'myId'
 const found = document.querySelector(selector); // renvoie le premier élément correspondant de la page
 const founds = document.querySelectorAll(selector); // renvoie un iterateur avec tous les éléments de la page correspondant
 ```
@@ -85,7 +92,8 @@ e.style.backgroundColor = ... // l'équivalent CSS est background-color
 
 ## [EventTarget](https://developer.mozilla.org/fr/docs/Web/API/EventTarget)
 
-Tout est un `EventTarget`. Un `EventTarget` écoute les évènements qui se produise sur lui-même, et réagit si on lui a donné un `listener` (une fonction).
+Tout est un `EventTarget`. Un `EventTarget` écoute les évènements qui se
+produise sur lui-même, et réagit si on lui a donné un `listener` (une fonction).
 
 ```js
 n.addEventListener(type, listener, options); // si l'évèvement type se produit sur n, alors exécute listener, avec des options
@@ -93,16 +101,15 @@ n.removeEventListener(type, listener); // attention, comparaison par référence
 
 // Exemple
 monElement.addEventListener(
-  'click',
+  "click",
   function () {
-    console.log('yo');
+    console.log("yo");
   },
   { once: true },
 );
 ```
 
-Éviter les `onclick`, `onmousemove`...
-Ils sont uniques par élément.
+Éviter les `onclick`, `onmousemove`... Ils sont uniques par élément.
 
 ## [Evènements](https://developer.mozilla.org/en-US/docs/Web/Events)
 
@@ -122,7 +129,7 @@ Ils sont uniques par élément.
 ### Event properties
 
 ```js
-element.addEventListener('click', function (e) {
+element.addEventListener("click", function (e) {
   e.target; // renvoie l'élément qui a généré l'évènement
   e.timestamp; // renvoie la date de l'évènement en ms depuis le chargement de la page
   e.clientX; // renvoie la position X de la souris
@@ -137,6 +144,7 @@ element.addEventListener('click', function (e) {
 
 - Ouvrir le dossier `/exos/3_dom`
 - Ouvrir le fichier `index.html` dans votre navigateur
-- Suivre les indications du fichier `index.js`, et vérifier les résultats dans votre navigateur
+- Suivre les indications du fichier `index.js`, et vérifier les résultats dans
+  votre navigateur
 
-## À suivre: [Asynchrone](../4_async/index.md)
+## À suivre: [Asynchrone](../4_async/4-1_intro.md)

@@ -1,6 +1,8 @@
 # Assignations
 
-Assigner une variable à une valeur signifie que l'on demande à la variable de "regarder" la valeur. On dit également qu'il y a un câble qui part de la variable jusqu'à la valeur.
+Assigner une variable à une valeur signifie que l'on demande à la variable de
+"regarder" la valeur. On dit également qu'il y a un câble qui part de la
+variable jusqu'à la valeur.
 
 Assigner pour la première fois une variable crée le câble.
 
@@ -65,11 +67,11 @@ b = 4; // Ok
 `const` n'empêche pas de muter ! (et tant mieux)
 
 ```js
-const romain = { favoriteMovie: 'Les Tuche' };
+const romain = { favoriteMovie: "Les Tuche" };
 
-romain.favoriteMovie = 'Les Tuche 2';
+romain.favoriteMovie = "Les Tuche 2";
 
-romain = { favoriteMovie: 'Les Tuche 3' }; // Error
+romain = { favoriteMovie: "Les Tuche 3" }; // Error
 ```
 
 ## À suivre: [Boucles et conditions](./2-2_loops.md)

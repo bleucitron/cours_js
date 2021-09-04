@@ -13,7 +13,7 @@ var o = { a: 1, a: 2 }; // Pas d'prob, mais  ne JAMAIS faire ça
 ```
 
 ```js
-'use strict';
+"use strict";
 
 a = 1; // ERROR
 var undefined = 1; // ERROR
@@ -42,9 +42,9 @@ C'est un format d'échange (manière de sérialiser des données structurées)
 const o = {
   a: 1,
   bloublou: 9,
-  chapito: 'yo',
+  chapito: "yo",
   brave: {
-    autre: 'object',
+    autre: "object",
   },
 };
 
@@ -56,7 +56,7 @@ console.log(JSON.stringify(o));
 ## [Dates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 ```js
-const uneDate = new Date('2009-10-12'); // renvoie une objet Date
+const uneDate = new Date("2009-10-12"); // renvoie une objet Date
 const aujourdHui = new Date();
 
 uneDate.getTime(); // nombre de millisecondes depuis le 1er janvier 1970
@@ -75,6 +75,7 @@ aujourdHui - uneDate; // soustrait les dates, renvoie un entier en millisecondes
 
 - Ouvrir le dossier `/exos/2_syntax`
 - Ouvrir le fichier `index.html` dans votre navigateur
-- Suivre les indications du fichier `index.js`, et vérifier les résultats dans votre navigateur
+- Suivre les indications du fichier `index.js`, et vérifier les résultats dans
+  votre navigateur
 
-## À suivre: [DOM](../3_dom/index.md)
+## À suivre: [DOM](../3_dom/3-1_index.md)

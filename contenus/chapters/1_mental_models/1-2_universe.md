@@ -1,6 +1,7 @@
 # L'univers Javascript
 
-_Basé sur [Just Javascript](https://justjavascript.com/), de [Dan Abramov](https://twitter.com/dan_abramov)._
+_Basé sur [Just Javascript](https://justjavascript.com/), de
+[Dan Abramov](https://twitter.com/dan_abramov)._
 
 ## Votre planète
 
@@ -8,11 +9,14 @@ _Basé sur [Just Javascript](https://justjavascript.com/), de [Dan Abramov](http
 
 Vous êtes sur une petite planète: votre code.
 
-Dans votre code, il y a des variables, des expressions, des mots-clés, des instructions...
+Dans votre code, il y a des variables, des expressions, des mots-clés, des
+instructions...
 
-Il y a aussi des réassignations de variables, des boucles, des conditions, des appels à des fonctions...
+Il y a aussi des réassignations de variables, des boucles, des conditions, des
+appels à des fonctions...
 
-Mais les valeurs, elles, sont plus haut, dans le ciel. **Les valeurs sont fondamentales**, et méritent une attention particulière.
+Mais les valeurs, elles, sont plus haut, dans le ciel. **Les valeurs sont
+fondamentales**, et méritent une attention particulière.
 
 **Les valeurs n'existent pas dans le code**.
 
@@ -20,9 +24,11 @@ Mais les valeurs, elles, sont plus haut, dans le ciel. **Les valeurs sont fondam
 
 ## Les étoiles
 
-Les valeurs sont un peu comme des étoiles, que l'on peut regarder depuis sa planète.
+Les valeurs sont un peu comme des étoiles, que l'on peut regarder depuis sa
+planète.
 
-Ces étoiles sont plus ou moins lointaines, mais sont toujours disponibles, on peut toujours les regarder.
+Ces étoiles sont plus ou moins lointaines, mais sont toujours disponibles, on
+peut toujours les regarder.
 
 ### Valeurs primitives
 
@@ -30,11 +36,12 @@ Nombres, booléens, strings...
 
 ```js
 console.log(5);
-console.log('romain');
+console.log("romain");
 console.log(undefined);
 ```
 
-Elles sont comme des étoiles: lointaines, **mon code ne peut pas les affecter**, mais je peux toujours les regarder.
+Elles sont comme des étoiles: lointaines, **mon code ne peut pas les affecter**,
+mais je peux toujours les regarder.
 
 ### Objets et fonctions
 
@@ -44,7 +51,8 @@ console.log([]);
 console.log(() => 1);
 ```
 
-Elles sont comme les roches de l'anneau de Saturne, proches de votre planète. **Je peux les manipuler depuis mon code**.
+Elles sont comme les roches de l'anneau de Saturne, proches de votre planète.
+**Je peux les manipuler depuis mon code**.
 
 ## Expressions
 
@@ -60,13 +68,15 @@ console.log(2 + 2); // 4
 
 ### Vérifier le type
 
-`typeof` permet de vérifier le type d'une valeur. C'est un opérateur qui permet de construire une question, une expression.
+`typeof` permet de vérifier le type d'une valeur. C'est un opérateur qui permet
+de construire une question, une expression.
 
-Vous pouvez voir ça comme un télescope qui, posé sur votre planète, regarde les étoiles.
+Vous pouvez voir ça comme un télescope qui, posé sur votre planète, regarde les
+étoiles.
 
 ```js
 typeof 2;
-typeof 'romain';
+typeof "romain";
 ```
 
 ### _<span style="color:royalblue">Essayez de trouver le plus de types possible.</span>_
