@@ -1,2 +1,4 @@
 node_modules
 bundle.js
+projects/**/node_modules
+projects/**/package*
