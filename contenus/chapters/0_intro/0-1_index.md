@@ -34,7 +34,7 @@ Javascript a la mauvaise réputation d'être **un langage "cassé"**,
 La plupart de la documentation pertinente sur Javascript est sur
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/JavaScript_technologies_overview).
 
-## Standards
+## ECMAScript
 
 Javascript est standardisé sous le nom d'ECMAScript depuis 1997.
 
@@ -74,6 +74,11 @@ rajoute des garde-fous.
 - ECMAScript 2016
 - ECMAScript 2017
 - ECMAScript ...
+
+## Javascript vs ECMAScript vs Node ?
+
+On peut schématiser les différents morceaux de "Javascript" comme ça:
+[ SCHÉMA ECMAScript / Browser / Node ]
 
 ### Compatibilité des navigateurs
 

@@ -11,7 +11,7 @@
 - #### [Égalité](./contenus/chapters/1_mental_models/1-5_equality.md)
 - #### [Propriétés](./contenus/chapters/1_mental_models/1-6_properties.md)
 
-## 2. La syntaxe Javascript
+## 2. La syntaxe ECMAScript
 
 - #### [Assignations](./contenus/chapters/2_syntax/2-1_assignments.md)
 - #### [Boucles et conditions](./contenus/chapters/2_syntax/2-2_loops.md)
@@ -19,7 +19,11 @@
 - #### [Tableaux](./contenus/chapters/2_syntax/2-4_arrays.md)
 - #### [Quelques utilitaires](./contenus/chapters/2_syntax/2-5_utils.md)
 
-## 3. [Le DOM](./contenus/chapters/3_dom/index.md)
+## 3. Les APIs navigateur
+
+- #### [Le DOM](./contenus/chapters/3_browser/3-1_dom.md)
+- #### [Les évènements](./contenus/chapters/3_browser/3-2_events.md)
+- #### [Localstorage](./contenus/chapters/3_browser/3-3_localstorage.md)
 
 ## Début du TP dirigé
 

@@ -1,14 +1,9 @@
+body {
+  height: 100vh;
+}
+
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
-}
-
-section {
-  background: lightgrey;
-  min-height: 2rem;
-  margin: 1rem 0;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
 }

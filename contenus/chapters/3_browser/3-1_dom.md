@@ -111,40 +111,4 @@ monElement.addEventListener(
 
 Éviter les `onclick`, `onmousemove`... Ils sont uniques par élément.
 
-## [Evènements](https://developer.mozilla.org/en-US/docs/Web/Events)
-
-- `DOMContentLoaded`
-  - Quand le HTML est chargée et que l'arbre DOM est construit
-- `load`
-  - Quand la page entière est chargée (CSS, fonts, images, etc.)
-- `click`, `mousedown`, `mouseup`, `dblclick`
-- `mousemove`, `mouseover`, `mouseenter`, `mouseleave`
-- `submit` (&lt;form>)
-- `keypress`, `keyup`, `keydown`
-- `input`
-- `change`
-- `scroll` (listener après le scroll)
-- `touchstart`
-
-### Event properties
-
-```js
-element.addEventListener("click", function (e) {
-  e.target; // renvoie l'élément qui a généré l'évènement
-  e.timestamp; // renvoie la date de l'évènement en ms depuis le chargement de la page
-  e.clientX; // renvoie la position X de la souris
-  e.clientY; // renvoie la position Y de la souris
-  e.preventDefault(); // empêche les comportements par défaut
-});
-```
-
----
-
-# _**À vos claviers !!!**_
-
-- Ouvrir le dossier `/exos/3_dom`
-- Ouvrir le fichier `index.html` dans votre navigateur
-- Suivre les indications du fichier `index.js`, et vérifier les résultats dans
-  votre navigateur
-
-## À suivre: [Asynchrone](../4_async/4-1_intro.md)
+## À suivre: [Évènements](../3_browser/3-2_events.md)

@@ -78,4 +78,4 @@ aujourdHui - uneDate; // soustrait les dates, renvoie un entier en millisecondes
 - Suivre les indications du fichier `index.js`, et vérifier les résultats dans
   votre navigateur
 
-## À suivre: [DOM](../3_dom/3-1_index.md)
+## À suivre: [DOM](../3_browser/3-1_dom.md)
