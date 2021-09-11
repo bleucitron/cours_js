@@ -25,7 +25,6 @@
 - #### [Les évènements](./contenus/chapters/3_browser/3-2_events.md)
 - #### [Localstorage](./contenus/chapters/3_browser/3-3_localstorage.md)
 
-## Début du TP dirigé
 
 ## 4. Asynchrone
 
@@ -33,6 +32,8 @@
 - #### [Promesses](./contenus/chapters/4_async/4-2_promises.md)
 - #### [Fetch](./contenus/chapters/4_async/4-3_fetch.md)
 - #### [`async`/`await`](./contenus/chapters/4_async/4-4_async_await.md)
+
+## Début du TP dirigé
 
 ## 5. [ES Next](./contenus/chapters/5_esnext/5-1_index.md)
 
