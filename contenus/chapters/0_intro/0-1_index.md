@@ -1,9 +1,9 @@
 # Introduction
 
-Javascript est un langage de programmation interprêté, faiblement typé, single
-threadé, et asynchrone
+Javascript est un langage de programmation interprété, faiblement typé, single
+threadé, et asynchrone.
 
-- Interprêté = non compilé _(encore que...)_
+- Interprété = non compilé _(encore que...)_
 - Faiblement typé = des types existent, mais on peut faire ce qu'on veut
   _(coucou Typescript...)_
 - Single threadé = ne peut pas paralléliser des tâches _(mais il est...)_
@@ -12,7 +12,7 @@ threadé, et asynchrone
 
 ## Généralités
 
-Javascript a été en décembre 1995 en seulement **10 jours (!)** par
+Javascript a été créé en décembre 1995 en seulement **10 jours :scream:** par
 [Brandon Eich](https://fr.wikipedia.org/wiki/Brendan_Eich), qui travaillait à
 l'époque pour [Netscape](https://fr.wikipedia.org/wiki/Netscape).
 
@@ -61,7 +61,7 @@ donc "casser". Et si c'était le cas, de nombreux utilisateurs se déporteraient
 vers des navigateurs n'ayant pas corrigé cette faille.
 
 Un status quo est donc en place: on ne corrige pas des failles de Javascript, on
-rajoute des garde-fous.
+rajoute plutôt des garde-fous.
 
 ### Historique succinct
 
@@ -85,4 +85,4 @@ On peut schématiser les différents morceaux de "Javascript" comme ça:
 - [Navigateurs](https://kangax.github.io/compat-table/es6/)
 - [Node](http://node.green/)
 
-#### _La suite: [Le modèle mental](./1-1_mental_models.md)_
+#### _La suite: [Le modèle mental](../1_mental_models/1-1_intro.md)_

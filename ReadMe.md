@@ -4,7 +4,7 @@
 
 ## 1. Se contruire un bon modèle mental
 
-- #### [Pourquoi ?](./contenus/chapters/1_mental_models/1-0_intro.md)
+- #### [Pourquoi ?](./contenus/chapters/1_mental_models/1-1_intro.md)
 - #### [L'univers Javascript](./contenus/chapters/1_mental_models/1-2_universe.md)
 - #### [Les variables](./contenus/chapters/1_mental_models/1-3_variables.md)
 - #### [Compter les valeurs](./contenus/chapters/1_mental_models/1-4_count.md)
