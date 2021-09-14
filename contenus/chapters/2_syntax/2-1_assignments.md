@@ -56,6 +56,8 @@ console.log(c); // 3
 
 ## `const` ou `let` ?
 
+Une variable définie avec `const` ne peut pas être réassignée.
+
 ```js
 const a = 1;
 let b = 2;
@@ -73,5 +75,9 @@ romain.favoriteMovie = "Les Tuche 2";
 
 romain = { favoriteMovie: "Les Tuche 3" }; // Error
 ```
+
+## À retenir
+
+**Ne jamais utiliser `var`.**
 
 ## À suivre: [Boucles et conditions](./2-2_loops.md)

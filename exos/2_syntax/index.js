@@ -21,10 +21,14 @@ console.log('--- Question 4 ---');
 */
 
 console.log('--- Question 5 ---');
-/* [5] logguer chacune des valeurs de "nombres" dans la console
-en utilisant .forEach()
+/* [5a] logguer chacune des valeurs de "nombres" dans la console
+en utilisant une boucle for
 */
 const nombres = [23, 12, 57, 178, 139, 434, 222, 1000, 59, 887];
+
+// [5b] la même chose avec une boucle for ... of
+
+// [5c] la même chose avec .forEach
 
 console.log('--- Question 6 ---');
 /* [6] à partir de "nombres", créer un nouveau tableau avec seulement les entiers pairs
@@ -37,9 +41,9 @@ console.log('--- Question 7 ---');
 */
 
 console.log('--- Question 8 ---');
-/* [8] à partir de "nombres", créer un nouveau tableau contenant les valeurs multipliées par 10
-  en utilisant .map() et la function x10
-*/
+// [8a] à partir de "nombres", créer un nouveau tableau contenant les valeurs multipliées par 10
+
+// [8b] essayez de simplifier au maximum l'écriture en utilisant la fonction x10
 
 console.log('--- Question 9 ---');
 /* [9] logguer chacune des valeurs de "couleurs" et leur longueur dans la console

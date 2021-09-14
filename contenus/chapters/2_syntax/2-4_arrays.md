@@ -12,6 +12,19 @@ array[0]; // 12
 array.length; // 4
 ```
 
+On peut ajouter un élément à un tableau avec
+- `.push()`, pour le mettre à la fin
+- `.unshift()`, pour le mettre au début
+
+```js
+const array = [1, 2, 3];
+
+array.push(23); // [1, 2, 3, 23]
+array.unshift(443); // [443, 1, 2, 3, 23]
+```
+
+La valeur pointée par `array` n'est alors pas modifiée (sa position dans l'univers n'a pas changé), même si son "contenu" a changé.
+
 ## Itérer sur un tableau
 
 Il y a plusieurs manières d'itérer sur un tableau.
@@ -46,9 +59,9 @@ fonctionnelle**.
 De manière illustrée, ça donne
 [ça](https://twitter.com/steveluscher/status/741089564329054208).
 
-- `a.forEach(f)`
+- ### `a.forEach(f)`
 
-Exécute `f` pour chaque élément de `a`. Ne renvoie rien.
+**Exécute `f` pour chaque élément de `a`**. Ne renvoie rien.
 
 ```js
 const array = [1, 2, 3, 4];
@@ -64,11 +77,11 @@ array.forEach(function (element, index, arr) {
 // 12
 ```
 
-- `a.map(f)`
+- ### `a.map(f)`
 
 Ici `f` est une fonction qui renvoie quelque chose: `f: element => newElement`.
 
-Exécute `f` pour chaque élément de `a`, et range dans un nouveau tableau chaque valeur de retour. Renvoie le nouveau tableau, de même taille. Le tableau original n'est pas modifié.
+Exécute `f` pour chaque élément de `a`, et **range dans un nouveau tableau chaque valeur de retour**. Renvoie le nouveau tableau, de même taille. Le tableau original n'est pas modifié.
 
 ```js
 const array = [1, 2, 3];
@@ -79,11 +92,11 @@ const array10 = array.map(function (e, i, a) {
 }); // [10, 20, 30]
 ```
 
-- `a.filter(f)`
+- ### `a.filter(f)`
 
 Ici `f` est une fonction qui renvoie une condition: `f: element => condition`.
 
-Exécute `f` pour chaque élément de `a`, et range dans un nouveau tableau l'élément s'il satisfait la condition. Renvoie le nouveau tableau, de même taille. Le tableau original n'est pas modifié.
+Exécute `f` pour chaque élément de `a`, et **range dans un nouveau tableau l'élément seulement s'il satisfait la condition**. Renvoie le nouveau tableau, de même taille. Le tableau original n'est pas modifié.
 
 ```js
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -94,11 +107,11 @@ const pairs = array.filter(function (e, i, a) {
 }); // [2, 4, 6, 8]
 ```
 
-- `a.find(f)`
+- ### `a.find(f)`
 
 Ici `f` est une fonction qui renvoie une condition: `f: element => condition`.
 
-Exécute `f` pour chaque élément de `a`, et s'arrête dès qu'un élément satisfait la condition. Renvoie le premier élément qui satisfait la condition.
+Exécute `f` pour chaque élément de `a`, et s'arrête dès qu'un élément satisfait la condition. **Renvoie le premier élément qui satisfait la condition.**
 
 ```js
 const array = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -109,7 +122,7 @@ const found = array.find(function (e, i, a) {
 });
 ```
 
-- `a.sort(f)`
+- ### `a.sort(f)`
 
 Ici `f` est une fonction qui renvoie un nombre: `f: (elementA, elementB) => number`. Si le nombre renvoyé est négatif, il faut inverser l'ordre des 2 valeurs.
 
@@ -121,7 +134,7 @@ const found = array.sort(function (a, b) {
 });
 ```
 
-- `a.includes(element)`
+- ### `a.includes(element)`
 
 Renvoie un booléen.
 
@@ -130,7 +143,7 @@ array.includes(2); // true
 array.includes(10); // false
 ```
 
-- `a.flat()`
+- ### `a.flat()`
 
 "Applatit" un niveau de profondeur.
 
@@ -139,7 +152,7 @@ const array = [1, 2, [3, [4]]];
 const applati = array.flat(); // [1, 2, 3, 4]
 ```
 
-- `a.slice(debut, fin)`
+- ### `a.slice(debut, fin)`
 
 Extrait un morceau du tableau, sans modifier le tableau original
 

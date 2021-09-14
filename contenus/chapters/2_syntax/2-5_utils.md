@@ -48,7 +48,7 @@ const o = {
   },
 };
 
-console.log(JSON.stringify(o));
+JSON.stringify(o);
 ```
 
 ⚠ C'est un format fragile ⚠, vérifier avec [JSON Lint](https://jsonlint.com/)

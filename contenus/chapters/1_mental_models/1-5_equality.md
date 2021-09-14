@@ -4,11 +4,11 @@ _Basé sur [Just Javascript](https://justjavascript.com/), de [Dan Abramov](http
 
 On va maintenant s'intéresser à comment comparer différentes valeurs.
 
-Un modèle mental solide est primordial pour ne pas se perdre dans les égalités en Javascript.
+**Un modèle mental solide est primordial pour ne pas se perdre dans les égalités en Javascript.**
 
 ## Types d'égalité
 
-En Javascript, il y a **3 types d'égalité**.
+En Javascript, il y a **3 types d'égalité** :facepunch:
 
 - Égalité stricte `a === b`
 - Égalité partielle `a == b`
@@ -17,20 +17,8 @@ En Javascript, il y a **3 types d'égalité**.
 ## Égalité de même valeur
 
 ```js
-console.log(Object.is(2, 2)); // true
-console.log(Object.is({}, {})); // false
-```
-
-### _<span style="color:royalblue">Que pensez-vous du code suivant ?</span>_
-
-```js
-let dwarves = 7;
-let continents = '7';
-let worldWonders = 3 + 4;
-
-console.log(Object.is(dwarves, continents)); // ?
-console.log(Object.is(continents, worldWonders)); // ?
-console.log(Object.is(worldWonders, dwarves)); // ?
+Object.is(2, 2); // true
+Object.is({}, {}); // false
 ```
 
 Dans notre modèle mental, si deux valeurs sont représentée par le même dessin, elles ne sont qu'une seule et même valeur.
@@ -38,6 +26,16 @@ Dans notre modèle mental, si deux valeurs sont représentée par le même dessi
 Et inversement.
 
 **La même valeur ne peut pas apparaître 2 fois dans notre modèle mental.**
+
+```js
+let dwarves = 7;
+let continents = '7';
+let worldWonders = 3 + 4;
+
+Object.is(dwarves, continents); // ?
+Object.is(continents, worldWonders); // ?
+Object.is(worldWonders, dwarves); // ?
+```
 
 Cela marche de la même façon pour les objets.
 
@@ -47,22 +45,22 @@ let cherry = banana;
 let chocolate = cherry;
 cherry = {};
 
-console.log(Object.is(banana, cherry)); // ?
-console.log(Object.is(cherry, chocolate)); // ?
-console.log(Object.is(chocolate, banana)); // ?
+Object.is(banana, cherry); // ?
+Object.is(cherry, chocolate); // ?
+Object.is(chocolate, banana); // ?
 ```
 
 ## Égalité stricte
 
 ```js
-console.log(2 === 2); // true
-console.log({} === {}); // false
+2 === 2; // true
+{} === {}; // false
 
-console.log(2 !== 3); // true
-console.log({} !== {}); // true
+2 !== 3; // true
+{} !== {}; // true
 ```
 
-Dans la plupart des cas, `===` est équivalent à `Object.is()`.
+Dans la plupart des cas, **`===` est équivalent à `Object.is()`**.
 
 Mais il y a 2 exceptions:
 
@@ -93,16 +91,20 @@ En ayant tout de même en tête les 2 exceptions.
 
 Ou ["presque égalité"](https://dorey.github.io/JavaScript-Equality-Table/) ou "égalité abstraite".
 
-Elle compare 2 valeurs après les avoir transformé en un type commun. On peut également dire qu'elle compare la valeur et le type.
+Elle compare 2 valeurs après les avoir transformées en un type commun. On peut également dire qu'elle compare la valeur et le type.
 
 ```js
-console.log([[]] == ''); // true
-console.log(true == [1]); // true
-console.log(false == [0]); // true
+[[]] == ''; // true
+true == [1]; // true
+false == [0]; // true
 ```
 
 **`==` est généralement évité, voire interdit**, car il ajoute de la confusion, et peut amener à des erreurs graves.
 
-> ## Always use `===` unless you have a good reason to use `==`.
+## À retenir
+
+> Always use `===` unless you have a good reason to use `==`
+
+Toujours utiliser `===` à moins d'avoir une bonne raison d'utiliser `==`.
 
 #### _La suite: [Propriétés](./1-6_properties.md)_

@@ -9,9 +9,9 @@ thing[0] = "r";
 console.log(thing);
 ```
 
-### _<span style="color:royalblue">À votre avis ? Quel est votre cheminement mental ?</span>_
+### _<span style="color:royalblue">À votre avis ? Que vaut `thing` ?</span>_
 
-Le code n'affichera jamais `'rateau'`.
+Réfléchissez à votre cheminement mental.
 
 ## Les valeurs primitives sont immutables
 
@@ -44,8 +44,8 @@ console.log(name); // ?
 
 Dans ce cas, la console affiche bien `muhammad`.
 
-Et ce résultat n'a pas grand chose à voir avec l'immutabilité des valeurs
-primitives.
+Et cela n'a rien à voir avec l'immutabilité des valeurs
+primitives. Ce n'est pas du tout la même chose que l'histoire du `gateau` et du `rateau`.
 
 ## Les variables sont des câbles
 
@@ -65,9 +65,18 @@ let name = "romain";
 let age = 30 + 4;
 ```
 
-La partie gauche d'une assignation doit être un câble.
+Assigner une valeur à une valeur est simplement accrocher un câble à une étoile.
 
-La partie droite une expression.
+La partie gauche d'une assignation doit être un câble, la partie droite une expression.
+
+Câble => résultat d'un calcul
+
+Une réassignation est simplement la redirection d'un câble vers une autre valeur.
+
+```js
+let name = "romain";
+name = "paul";
+```
 
 ### Lire la valeur d'une variable
 
@@ -84,9 +93,7 @@ Ici, on ne passe pas la variable à `console.log`.
 - "Quelle est la valeur pointée par `name` ?"
 - "`'romain'`"
 
-**Les mots sont importants**.
-
-Surtout dans votre modèle mental.
+**Les mots sont importants**. Surtout dans votre modèle mental.
 
 Dans le cas suivant, l'usage de mauvais mots peut induire en erreur.
 
@@ -122,9 +129,9 @@ let y = x;
 x = 0;
 ```
 
-## Les fondations de l'univers
+## À retenir: Les fondations de l'univers
 
-- Notre univers est plein de valeurs
+- L'univers Javascript est plein de valeurs
 - Chaque valeur appartient à un type
 - Certains de ces types sont primitifs
 - Les valeurs de type primitif sont immutables
@@ -132,7 +139,7 @@ x = 0;
 
 ---
 
-# _**À vos crayons !!!**_
+## _**À vos crayons !!!**_
 
 - Faire les exercices du fichier `/exos/1_mental_models/1-3_variables.md`
 

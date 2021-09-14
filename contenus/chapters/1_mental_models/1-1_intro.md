@@ -5,7 +5,7 @@ _Basé sur [Just Javascript](https://justjavascript.com/), de
 
 Chacun a son expérience.
 
-Vous êtes peut-être développeu.r.se débutant.e.
+Vous êtes peut-être développeur ou développeuse débutante.
 
 Ou alors vous avez une certaine expérience, mais certains concepts sont encore
 flous.
@@ -31,22 +31,22 @@ s'affranchit de la simulation.
 ![La matrice depuis l'intérieur](../../images/matrix_inside.jpeg)
 
 Les détails d'implémentation ne sont pas importants pour bâtir les fondations de
-notre compréhension du langage.
+notre compréhension du langage. Au fur et à mesure que nos fondations se solidifient, on peut s'intéresser à l'extérieur de la matrice, au côté "machine" de la simulation.
 
-Alors peut-être qu'un jour, nous pourrons voir comme Neo.
+Et peut-être qu'un jour, nous pourrons voir comme Neo.
 
 ![La matrice depuis Neo](../../images/matrix_neo.jpeg)
 
 ## Votre monologue
 
-Réfléchir à comment vous interprétez le code suivant, avec des mots humains.
+Lorsque l'on lit du code informatique, quelque soit le langage, on l'interprète avec notre vocabulaire humain. Et parfois, selon les mots que l'on choisit, la compréhension du code peut changer du tout au tout.
+
+Quel est votre monologue, votre façon de décrire ce bout de code ?
 
 ```js
 let a = 10;
 let b = a;
 a = 0;
 ```
-
-Quel est votre monologue, votre façon de décrire le code ?
 
 #### _La suite: [L'univers Javascript](./1-2_universe.md)_

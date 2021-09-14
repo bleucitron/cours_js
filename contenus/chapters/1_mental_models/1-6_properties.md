@@ -16,15 +16,11 @@ let salameche = {
 
 salameche.type = "water";
 salameche.owner.name = "pierre";
-```
 
-### _<span style="color:royalblue">D'après vous, que devraient afficher les lignes suivantes ?</span>_
-
-```js
-console.log(pikachu.type); // ?
-console.log(pikachu.owner.name); // ?
-console.log(salameche.type); // ?
-console.log(salameche.owner.name); // ?
+pikachu.type; // ?
+pikachu.owner.name; // ?
+salameche.type; // ?
+salameche.owner.name; // ?
 ```
 
 ## Les propriétés sont des câbles
@@ -32,10 +28,8 @@ console.log(salameche.owner.name); // ?
 Comme les variables, **elles pointent vers des valeurs**, jamais vers des
 variables, ou vers d'autres propriétés.
 
-Mais ce ne sont pas des variables.
-
 ```js
-let evoli = {};
+let evoli = {}; // aucun câble ici
 
 let pikachu = {
   type: "electric",
@@ -43,7 +37,9 @@ let pikachu = {
 };
 ```
 
-À la différence des variables, elles appartiennent à un objet.
+**Mais ce ne sont pas des variables.**
+
+À la différence des variables, les propriétés appartiennent à un objet.
 
 Un objet sert à grouper des données qui ont du sens ensemble. Mais **les données
 ne sont pas dans l'objet**.
@@ -60,8 +56,8 @@ Il y a donc 2 types de câbles:
 Il faut se servir du nom de la propriété. On peut utiliser le `.`, ou les `[]`.
 
 ```js
-console.log(pikachu.attack); // 40
-console.log(pikachu["attack"]); // 40
+pikachu.attack; // 40
+pikachu["attack"]; // 40
 ```
 
 Dans les 2 cas, il s'agit d'expressions de propriété.
@@ -71,7 +67,7 @@ expression.
 
 ```js
 let x = "ty" + "pe";
-console.log(pikachu[x]); // electric
+pikachu[x]; // electric
 ```
 
 ## Assigner une propriété
@@ -94,7 +90,7 @@ let pikachu = {
   attack: 40,
 };
 
-console.log(pikachu.color); // ?
+pikachu.color; // ?
 ```
 
 **Règles pour les expressions de propriété:**
@@ -106,14 +102,14 @@ console.log(pikachu.color); // ?
   - si non, répondre `undefined`
 
 ```js
-console.log(pikachu.color); // undefined
+pikachu.color; // undefined
 ```
 
 ⚠ Ça ne veut pas dire que `pikachu` a une propriété `color` qui pointe vers
 `undefined`.
 
 ```js
-console.log(pikachu.friend.name); // ?
+pikachu.friend.name; // ?
 ```
 
 ## Mutations
@@ -183,9 +179,17 @@ salameche = {
 
 Au final, tout n'est qu'une histoire de câbles.
 
+## À retenir
+
+- **Les propriétés sont des câbles**, comme les variables.
+
+- Changer une propriété d'un objet s'appelle "muter" un objet.
+
+- **Muter peut être risqué**.
+
 ---
 
-# _**À vos crayons !!!**_
+## _**À vos crayons !!!**_
 
 - Faire les exercices du fichier `/exos/1_mental_models/1-6_properties.md`
 

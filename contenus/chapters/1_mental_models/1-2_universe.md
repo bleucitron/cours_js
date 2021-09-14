@@ -15,10 +15,13 @@ instructions...
 Il y a aussi des réassignations de variables, des boucles, des conditions, des
 appels à des fonctions...
 
-Mais les valeurs, elles, sont plus haut, dans le ciel. **Les valeurs sont
-fondamentales**, et méritent une attention particulière.
+Mais les valeurs, elles, sont plus haut, dans le ciel. Elles ne sont pas sur votre planète.
 
 **Les valeurs n'existent pas dans le code**.
+
+La compréhension de ce qu'est une valeur est fondamentale, et mérite une attention particulière.
+
+
 
 [![L'univers Javascript](../../images/universe.png)](https://illustrated.dev/)
 
@@ -35,20 +38,20 @@ peut toujours les regarder.
 Nombres, booléens, strings...
 
 ```js
-console.log(5);
-console.log("romain");
-console.log(undefined);
+5
+"romain"
+undefined
 ```
 
 Elles sont comme des étoiles: lointaines, **mon code ne peut pas les affecter**,
-mais je peux toujours les regarder.
+mais je peux toujours les regarder, et demander des informations sur elles.
 
 ### Objets et fonctions
 
 ```js
-console.log({});
-console.log([]);
-console.log(() => 1);
+{}
+[]
+() => 1
 ```
 
 Elles sont comme les roches de l'anneau de Saturne, proches de votre planète.
@@ -56,7 +59,7 @@ Elles sont comme les roches de l'anneau de Saturne, proches de votre planète.
 
 ## Expressions
 
-Ces sont les questions auxquelles Javascript peut répondre.
+Ces sont les questions auxquelles Javascript peut répondre. En gros, ce sont des calculs, simples ou complexes.
 
 ```js
 2 + 2;
@@ -72,7 +75,7 @@ console.log(2 + 2); // 4
 de construire une question, une expression.
 
 Vous pouvez voir ça comme un télescope qui, posé sur votre planète, regarde les
-étoiles.
+étoiles, et vous renseigne sur leur nature.
 
 ```js
 typeof 2;
@@ -89,8 +92,8 @@ Et c'est tout.
 
 ### Valeurs primitives
 
-- Undefined (`undefined`): pour les valeurs non définies par erreur.
-- Null (`null`): pour les valeurs non définies intentionellement.
+- Undefined (`undefined`): pour les valeurs non définies par erreur
+- Null (`null`): pour les valeurs non définies intentionellement
 - Booléens (`true`, `false`): pour la logique
 - Nombres (`1`, `4.5`, ...): pour les maths
 - Strings (`a`, `romain`, ...): pour le texte
@@ -101,5 +104,9 @@ Et c'est tout.
 
 - Objets (`{}`, ...): pour regrouper des données
 - Functions (`() => 1`, ...): pour faire référence à du code
+
+## À retenir
+
+Notre univers Javascript est principalement constitué de valeurs, qui flottent autour de notre code.
 
 #### _La suite: [Valeurs et variables](./1-3_variables.md)_

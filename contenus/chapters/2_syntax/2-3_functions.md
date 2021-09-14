@@ -101,9 +101,6 @@ Elles possèdent 2 avantages:
 - plus concises
 - pas de redéfinition de `this`
 
-Mais en revanche, **une fonction fléchée sera toujours anonyme**, même si on la
-pointe par une variable.
-
 **En général, il est recommandé d'utiliser la syntaxe fléchée pour les
 callbacks**, qui sont des fonctions que l'on passe à d'autres fonctions.
 

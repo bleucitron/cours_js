@@ -44,6 +44,13 @@ undefined
 
 Toutes les autres valeurs sont "truthy".
 
+Les valeurs `falsy` ne sont pas fausses.
+
+```js
+0 === false // false
+NaN === false // false
+```
+
 Inverser une valeur "falsy" renvoie `true`, inverser une valeur "truthy" renvoie
 `false`.
 
@@ -103,7 +110,7 @@ for (let i = 10; i > 0; i = i - 2) {
 }
 ```
 
-En général, **on préfère utiliser la syntaxe fonctionnelle des tableaux pour
+Très souvent, **on préfère utiliser la syntaxe fonctionnelle des tableaux pour
 boucler**.
 
 ## À suivre: [Fonctions](./2-3_functions.md)

@@ -9,6 +9,8 @@ En revanche, l'exercice permet de réfléchir à ce qui distingue les valeurs en
 elles, et donc de commencer à aborder la notion d'égalité, si particulière en
 Javascript.
 
+Pour rappel, les 9 types de Javascript sont:
+
 - Undefined
 - Null
 - Booléens
@@ -24,7 +26,7 @@ Javascript.
 `undefined`
 
 ```js
-console.log(typeof undefined); // 'undefined'
+typeof undefined; // 'undefined'
 ```
 
 `undefined` est l'unique valeur de type `'undefined'`.
@@ -44,8 +46,10 @@ b = undefined;
 console.log(b); // undefined
 ```
 
-⚠ Malgré son nom, `undefined` ne signifie pas qu'une variable n'est pas définie,
+⚠ Malgré son nom, **`undefined` ne signifie pas qu'une variable n'est pas définie**,
 mais qu'elle n'a pas de valeur.
+
+Si d'aventure vous avez une variable non définie dans votre code, vous aurez une `ReferenceError` dans la console du navigateur.
 
 ```js
 console.log(a); // ReferenceError
@@ -61,17 +65,21 @@ let a;
 Dan Abramov parle de la "petite soeur" d'`undefined`, car elle fonctionne de
 manière très similaire.
 
-⚠ Dû à un bug historique, `null` se prend pour un objet.
+⚠ [Dû à un bug historique](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/typeof#informations_suppl%C3%A9mentaires), `null` se prend pour un objet.
 
 ```js
-console.log(typeof null); // 'object'
+typeof null; // 'object'
 ```
 
-Mais `null` n'est pas un objet.
+Mais **`null` n'est pas un objet**.
 
 `null` est `null`.
 
 Elle représente l'absence intentionnelle de valeur.
+
+### Quelle différence avec `undefined` ?
+
+Presque aucune.
 
 À la différence d'`undefined`, `null` n'apparaît jamais naturellement.
 
@@ -85,8 +93,8 @@ Il s'agit toutefois d'une convention.
 `true` / `false`
 
 ```js
-console.log(typeof true); // 'boolean'
-console.log(typeof false); // 'boolean'
+typeof true; // 'boolean'
+typeof false; // 'boolean'
 ```
 
 Blanc / Noir.
@@ -107,16 +115,16 @@ let sad = !happy;
 (et tous les autres...)
 
 ```js
-console.log(typeof 1); // 'number'
-console.log(typeof -2.75); // 'number'
+typeof 1; // 'number'
+typeof -2.75; // 'number'
 ```
 
 Tout type de nombre est représenté par le type `'number'`.
 
-Il y en a 18 437 736 874 454 812 624.
+Il y en a précisement 18 437 736 874 454 812 624.
 
 ```js
-console.log(0.1 + 0.2 === 0.3); // ??
+0.1 + 0.2 === 0.3; // ??
 ```
 
 Ce "problème" n'est pas lié à Javascript, mais à l'impossibilité physique de
@@ -125,17 +133,17 @@ représenter l'infinité des nombres mathématiques.
 Les ordinateurs utilisent donc les
 [Maths à virgule flottante](https://fr.wikipedia.org/wiki/Virgule_flottante).
 
-Plus on est proche de zéro, plus on peut être précis.
-
-Et tous les entiers sont exacts jusqu'à `Number.MAX_SAFE_INTEGER`.
+Plus on est proche de zéro, plus on peut être précis. Tous les entiers sont exacts jusqu'à `Number.MAX_SAFE_INTEGER`.
 
 ```js
-console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
-console.log(Number.MAX_SAFE_INTEGER + 1); // 9007199254740992
-console.log(Number.MAX_SAFE_INTEGER + 2); // 9007199254740992
+Number.MAX_SAFE_INTEGER; // 9007199254740991
+Number.MAX_SAFE_INTEGER + 1; // 9007199254740992
+Number.MAX_SAFE_INTEGER + 2; // 9007199254740992
 ```
 
 ### Nombres spéciaux
+
+`Infinity`, `-Infinity`, `NaN`, `-0`
 
 ```js
 let scale = 0;
@@ -148,7 +156,7 @@ let d = 1 / c; // -0
 `NaN` , ou _Not A Number_, représente le résultat d'une opération mathématique
 impossible, mais est bien un `'number'`, malgré son nom.
 
-Une `'string'` n'est pas `NaN`, un `'object'` n'est pas `NaN`...
+Une `'string'` n'est pas de type `NaN`, un `'object'` n'est pas de type `NaN`, etc...
 
 ## BigInt
 
@@ -157,7 +165,7 @@ Une `'string'` n'est pas `NaN`, un `'object'` n'est pas `NaN`...
 C'est un type récent, qui sert à représenter des entiers très grands.
 
 ```js
-console.log(typeof 1n); // 'bigint'
+typeof 1n; // 'bigint'
 ```
 
 On peut alors calculer précisement des entiers plus grands qu'avec des
@@ -165,8 +173,8 @@ On peut alors calculer précisement des entiers plus grands qu'avec des
 
 ```js
 let alot = 9007199254740991n;
-console.log(alot + 1n); // 9007199254740992n
-console.log(alot + 2n); // 9007199254740993n
+alot + 1n; // 9007199254740992n
+alot + 2n; // 9007199254740993n
 ```
 
 Théoriquement, il y a autant de `'bigint'` que d'entiers.
@@ -178,8 +186,8 @@ Dans la vraie vie, on peut très bien se contenter de `'number'`.
 `coucou`
 
 ```js
-console.log(typeof "romain"); // 'string'
-console.log(typeof ""); // 'string'
+typeof "romain"; // 'string'
+typeof ""; // 'string'
 ```
 
 Le type `'string'` représente du texte, quel que soit sa taille.
@@ -191,7 +199,7 @@ Les strings ne sont pas des objets, même si on en a parfois l'impression.
 
 ```js
 let hey = "Salut";
-console.log(hey[0]); // 'S'
+hey[0]; // 'S'
 ```
 
 ## Symbole
@@ -199,7 +207,7 @@ console.log(hey[0]); // 'S'
 `Symbol(1)`
 
 ```js
-console.log(typeof Symbol()); // 'symbol'
+typeof Symbol(); // 'symbol'
 ```
 
 Trop abstrait, sort du cadre de ce cours.
@@ -209,9 +217,9 @@ Trop abstrait, sort du cadre de ce cours.
 `{}`
 
 ```js
-console.log(typeof {}); // 'object'
-console.log(typeof []); // 'object'
-console.log(typeof new Date()); // 'object'
+typeof {}; // 'object'
+typeof []; // 'object'
+typeof new Date(); // 'object'
 ```
 
 La plupart des valeurs non-primitives sont de type `'object'`.
@@ -253,7 +261,7 @@ détruit.
 
 ```js
 let evier = {};
-evier = null;
+evier = null; // le {} continue d'exister mais n'est plus accessible, il sera supprimé un jour par le ramasse-miettes
 ```
 
 ## Fonction
@@ -261,7 +269,7 @@ evier = null;
 `function () {}`
 
 ```js
-console.log(typeof function () {}); // 'function'
+typeof function () {}; // 'function'
 ```
 
 Les fonctions contiennent du code, mais sont des valeurs à part entière, au même
@@ -280,10 +288,10 @@ let makeCake = function () {
 };
 
 let cake = makeCake; // la fonction n'est pas exécutée
-console.log(cake);
+typeof cake; // ?
 
 let pie = makeCake(); // la fonction est exécutée
-console.log(pie);
+typeof pie; // ?
 ```
 
 `makeCake` est une expression, qui pointe vers la valeur fonction.
@@ -291,12 +299,12 @@ console.log(pie);
 `makeCake()` est une expression, qui demande la valeur renvoyée par l'éxecution
 de la fonction vers laquelle pointe `makeCake`.
 
-## En bref
+## À retenir
 
-**Le nombre de valeurs primitives est fixé**, et sera toujours le même quel que
+- **Le nombre de valeurs primitives est fixé**, et sera toujours le même quel que
 soit notre code.
 
-**Le nombre de valeurs objets ou fonctions varie** au cours du temps, selon que
+- **Le nombre de valeurs objets ou fonctions varie** au cours du temps, selon que
 votre code en crée, ou que le ramasse-miette en détruit.
 
 #### _La suite: [Égalité(s) des valeurs](./1-5_equality.md)_
