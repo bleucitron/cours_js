@@ -114,4 +114,11 @@ callbacks**, qui sont des fonctions que l'on passe à d'autres fonctions.
 });
 ```
 
+## _**À vos claviers !!!**_
+
+- Ouvrir le dossier `/exos/2_syntax`
+- Ouvrir le fichier `index.html` dans votre navigateur
+- Suivre les indications du fichier `part-1.js`, et vérifier les résultats dans
+  votre navigateur
+
 ## À suivre: [Tableaux](./2-4_arrays.md)
