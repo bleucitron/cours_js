@@ -45,7 +45,7 @@ const letters = 'abcdefghijklmnopqrstuvwxyz';
 /* [3]
   créer une fonction 'makePassword' qui en entrée prend un nombre 'size' et renvoie un mot de cette longueur
   construit avec des lettres au hasard.
-  Utiliser la fonction 'getLetter' ainsi qu'une boucle for.
+  Utiliser la fonction 'getNumber', 'getLetter' ainsi qu'une boucle for.
 */
 
 /* [Bonus]
