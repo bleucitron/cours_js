@@ -7,10 +7,18 @@ body {
 
 .create {
   display: flex;
+  align-items: center;
   gap: 0.5em;
   width: fit-content;
   padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 0.3em;
   color: white;
+  cursor: pointer;
+}
+
+.create:hover {
+  background: hsl(204, 25%, 30%);
 }
 
 .notes {
