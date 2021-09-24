@@ -21,7 +21,7 @@ const nombres = [23, 12, 57, 178, 139, 434, 222, 1000, 59, 887, 3141];
 // [2ter] la même chose avec .map
 
 /* [3] à partir de "nombres", créer un nouveau tableau avec seulement les entiers plus grands que 100
-  en utilisant une boucle if
+  en utilisant une boucle for et un if
 */
 
 // [3bis] la même chose avec .filter

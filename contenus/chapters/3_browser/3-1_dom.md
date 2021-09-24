@@ -19,6 +19,18 @@ EventTarget -> Node -> Element
 Les `element` sont des `nodes`, mais pas l'inverse, les `nodes` sont des
 `event targets`, mais pas l'inverse.
 
+## Window
+
+TODO => Détailler
+
+```js
+const timeoutId = setTimeout(function() {}, 1000) // exécute la fonction au bout de 1000ms
+const intervalId = setInterval(function() {}, 1000) // exécute la fonction toutes les 1000ms
+
+clearTimeout(timeoutId) // annule le timeout
+clearInterval(intervalId) // annule l'intervalle
+```
+
 ## [Node](https://developer.mozilla.org/fr/docs/Web/API/Node)
 
 Représentent les noeuds de l'arbre.
