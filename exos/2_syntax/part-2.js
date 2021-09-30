@@ -21,7 +21,7 @@ const nombres = [23, 12, 57, 178, 139, 434, 222, 1000, 59, 887, 3141];
 // [2ter] la même chose avec .map
 
 /* [3] à partir de "nombres", créer un nouveau tableau avec seulement les entiers plus grands que 100
-  en utilisant une boucle for et un if
+  en utilisant if et une boucle for
 */
 
 // [3bis] la même chose avec .filter
@@ -38,6 +38,8 @@ const nombres = [23, 12, 57, 178, 139, 434, 222, 1000, 59, 887, 3141];
   en utilisant .forEach() et 'getLength'.
   ranger le résultat de couleurs.forEach(...) dans une variable '_longueurs'
 */
+
+const couleurs = ['rouge', 'bleu', 'vert', 'marron', 'turquoise', 'fuschia'];
 
 /* [7]
   à partir de couleurs créer un nouveau tableau 'longueurs' contenant toutes les longueurs
