@@ -10,7 +10,6 @@ section {
 }
 
 #exo1 {
-  flex-flow: column;
   align-items: center;
   overflow-y: auto;
 }

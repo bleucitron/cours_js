@@ -21,6 +21,20 @@ const colors = [
   'purple',
 ];
 
+const exo1 = document.getElementById('exo1');
+
+colors.forEach(function (color, position) {
+  const colorDiv = document.createElement('div');
+  exo1.append(colorDiv);
+  colorDiv.classList.add('color');
+  colorDiv.style.background = color;
+  colorDiv.textContent = position + 1 + '. ' + color;
+
+  colorDiv.addEventListener('click', function () {
+    document.body.style.background = color;
+  });
+});
+
 // -------------------------------
 
 /* Exercice 2: Taille
