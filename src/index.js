@@ -45,6 +45,12 @@ document.addEventListener(
       Utiliser cette fonction pour remplacer le code de création du bouton de filtre.
     */
 
+    // [13] Utiliser la fonction getJson() pour charger les tweets à la place des lignes 6 à 11
+
+    /* [14] Utiliser Promise.all() pour charger également les tweets de cette url :
+          'https://raw.githubusercontent.com/iOiurson/formation/correction/data/tweets2.json'
+        */
+
     // ### BONUS: LOCALSTORAGE ###
     // [1] Rajouter un bouton "fav" à chaque li
 
