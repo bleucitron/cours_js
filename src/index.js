@@ -16,13 +16,49 @@ document.addEventListener(
     // [1] créer et ajouter un <button> "bouton" qui quand on clique dessus affiche 'click' dans la console.
     // Ne pas oublier de donner un textContent au bouton
 
+    const button = document.createElement('button');
+    button.textContent = 'Click';
+
+    document.body.append(button);
+
     // [2] créer une fonction, qui pour un tweet en entrée, crée et retourne un <li> contenant le texte du tweet
+
+    function createLi(tweet) {
+      const li = document.createElement('li');
+      li.textContent = tweet.full_text;
+
+      return li;
+    }
 
     // [3] créer et ajouter un <ol> à la page, puis y ajouter les <li> de tweets en utilisant [2]
 
+    const ol = document.createElement('ol');
+    document.body.append(ol);
+
+    tweets.forEach(tweet => {
+      const li = createLi(tweet);
+
+      ol.append(li);
+    });
+
     // [4] créer une fonction checkFr qui pour un tweet en entrée renvoie vrai ou faux selon si la langue est 'fr'
+    function checkFr(tweet) {
+      return tweet.lang === 'fr';
+    }
 
     // [5] modifier "bouton", et utiliser checkFr au clic du bouton pour afficher dans la console la liste des tweets français
+    button.addEventListener('click', () => {
+      const tweetsFr = tweets.filter(checkFr);
+
+      const olFr = document.createElement('ol');
+
+      tweetsFr.forEach(tweet => {
+        const li = createLi(tweet);
+        olFr.append(li);
+      });
+
+      ol.replaceWith(olFr);
+    });
 
     // [6] modifier "bouton" pour que quand on clique dessus,
     //  - crée un nouveau <ol> avec seulement les tweets français
