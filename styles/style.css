@@ -1,9 +1,32 @@
 body {
   height: 100vh;
+  padding: 0.5rem;
 }
 
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
+}
+
+.tweet {
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.author {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 1rem;
+  font-style: italic;
+  margin-left: auto;
+  width: fit-content;
 }
