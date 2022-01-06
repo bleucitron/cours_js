@@ -1,4 +1,6 @@
-function makeSuggestion({ city, name, postcode }) {
+function makeSuggestion(suggestion, addTodo) {
+  const { city, name, postcode } = suggestion;
+
   const li = document.createElement('li');
   const labelDiv = document.createElement('div');
   const cityDiv = document.createElement('div');
@@ -13,17 +15,22 @@ function makeSuggestion({ city, name, postcode }) {
   li.append(labelDiv, cityDiv);
 
   li.addEventListener('click', () => {
-    console.log('NAME', name, postcode, city);
+    addTodo(suggestion);
   });
 
   return li;
 }
 
-export default function createSuggestions(suggestions) {
-  const ul = document.createElement('ul');
-  ul.classList.add('suggestions');
+export function clearSuggestions() {
+  const ul = document.getElementById('suggestions');
+  ul.innerHTML = '';
+}
 
-  const lis = suggestions.map(makeSuggestion);
+export function updateSuggestions(suggestions, addTodo) {
+  const lis = suggestions.map(s => makeSuggestion(s, addTodo));
+
+  const ul = document.getElementById('suggestions');
+  ul.innerHTML = '';
   ul.append(...lis);
 
   return ul;

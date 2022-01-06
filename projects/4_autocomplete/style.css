@@ -2,7 +2,11 @@
   box-sizing: border-box;
 }
 
-#search {
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#search, #todo {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -23,7 +27,7 @@
   border-color: mediumaquamarine;
 }
 
-.suggestions {
+#suggestions {
   width: 100%;
 }
 
@@ -42,4 +46,40 @@
 
 .suggestion:hover {
   background: lightgrey;
+}
+
+.todos {
+  width: 100%;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  width: 100%;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.todo:hover {
+  background: lightblue;
+}
+
+.todo button {
+  cursor: pointer;
+  font-size: 0.7em;
+}
+
+.todo.done {}
+
+.todo.done div {
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+.todo.done button:hover {
+  opacity: 1
 }
