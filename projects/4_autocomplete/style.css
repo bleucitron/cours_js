@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+#search {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 3rem auto;
+  width: 50%;
+}
+
+#todo {}
+
+.text-input {
+  width: 100%;
+  padding: 0.5em;
+  outline: none;
+  border: 1px solid lightgrey;
+}
+
+.text-input:focus {
+  border-color: mediumaquamarine;
+}
+
+.suggestions {
+  width: 100%;
+}
+
+.suggestion {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em;
+  border: 1px solid black;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.suggestion:last-of-type {
+  border-bottom: 1px solid black
+}
+
+.suggestion:hover {
+  background: lightgrey;
+}
