@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function toggle(position) {
-    const toComplete = todos.find((_, i) => i == position);
+    const toComplete = displayedTodos.find((_, i) => i == position);
     toComplete.done = !toComplete.done;
 
     displayedTodos = all ? todos : todos.filter(todo => !todo.done);
@@ -66,6 +66,5 @@ document.addEventListener('DOMContentLoaded', () => {
   let todoUl = createTodos(todos, remove, toggle);
 
   todoSection.append(button, todoUl);
-
   document.body.append(searchSection, todoSection);
 });
