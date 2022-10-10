@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.countdown {
+  display: flex;
+  gap: 5rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.time {
+  display: flex;
+}
+
+.colon {
+  opacity: 0.2;
+}
+
+.countdown > div {
+  font-size: 5rem;
+}
+
+.label {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.message {
+  margin-top: 2rem;
+  color: red;
+  font-size: 4rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.displayed {
+  opacity: 1;
+}

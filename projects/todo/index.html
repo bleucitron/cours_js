@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta description="Projet Todo" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <script
+      src="https://kit.fontawesome.com/07a38673bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+
+    <script type="module" src="./index.js" defer></script>
+
+    <title>Todos</title>
+  </head>
+
+  <body>
+    <h1>Todos</h1>
+    <section class="create">
+      <label>
+        <input id="new" placeholder="à ne pas oublier" />
+        <button>Ajouter</button>
+      </label>
+    </section>
+    <section class="todos">
+      <div class="progress">
+        <span>1</span>
+        <span>/</span>
+        <span>4</span>
+        <div class="bar">
+          <div class="done"></div>
+        </div>
+      </div>
+      <ul>
+        <li class="todo">
+          <input type="checkbox" />
+          <p>Faire les courses</p>
+          <button>Supprimer</button>
+        </li>
+        <li class="todo">
+          <input type="checkbox" />
+          <p>Regarder Youtube</p>
+          <button>Supprimer</button>
+        </li>
+        <li class="todo done">
+          <input type="checkbox" checked />
+          <p>Jouer à Candy Crush</p>
+          <button>Supprimer</button>
+        </li>
+        <li class="todo">
+          <input type="checkbox" />
+          <p>Payer les impôts</p>
+          <button>Supprimer</button>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

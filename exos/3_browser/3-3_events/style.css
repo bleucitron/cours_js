@@ -1,0 +1,61 @@
+section {
+  background: lightgrey;
+  /* width: 100%; */
+  min-height: 2rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+#exo1 {
+  align-items: center;
+  overflow-y: auto;
+}
+
+.color {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.dots {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+  height: 1rem;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.dot {
+  flex: 0 0 0.5rem;
+  height: 0.5rem;
+  background: white;
+  border-radius: 50%;
+}
+
+.character {
+  width: 10rem;
+  height: 12rem;
+  margin: 2rem;
+  border: 1px solid black;
+  border-radius: 1rem 1rem 50% 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.character:hover {
+  box-shadow: 0 0 15px 2px black;
+}
+
+.character .name {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.character img {
+  object-fit: contain;
+  width: 100%;
+}

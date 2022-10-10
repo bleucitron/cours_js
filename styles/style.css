@@ -1,0 +1,17 @@
+body {
+  font-family: Helvetica;
+  font-weight: lighter;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0;
+}

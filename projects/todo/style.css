@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: 'Montserrat';
+  background: hsl(403, 25%, 60%);
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 2rem 0;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+
+.create {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.create input {
+  width: 50vw;
+}
+
+.create input, .create button {
+  padding: 0.5em;
+  outline: none;
+  border: none;
+  border-radius: 0.3em;
+}
+
+.create button {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  background: hsl(403, 70%, 30%);
+  color: white
+}
+
+.todos {
+  font-size: 1.5rem;
+}
+
+.progress {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.progress .bar {
+  margin: 1rem 0;
+  height: .5rem;
+  background: white;
+  border-radius: 0.3em;
+}
+
+.progress .done {
+  margin: 1rem 0;
+  height: .5rem;
+  width: 25%;
+  background: hsl(403, 70%, 30%);
+  border-radius: 0.3em;
+  transition: width 0.4s ease;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5em;
+  background: hsl(403, 25%, 70%);
+}
+
+.todo p {
+  width: 30rem;
+}
+
+.todo button {
+  font-size: 1rem;
+  padding: 0.5em;
+  outline: none;
+  border: none;
+  border-radius: 0.3em;
+}
+
+.todo.done {
+  opacity: 0.5;
+}
+
+.todo.done p {
+  text-decoration: line-through;
+}
+
+.todo input {
+  accent-color: hsl(403, 25%, 50%);
+}

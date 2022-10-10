@@ -1,0 +1,14 @@
+body {
+  padding-inline: 1rem;
+}
+
+#hello {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-block: 2rem;
+}
+
+label {
+  display: block;
+  margin-block: 1rem;
+}
