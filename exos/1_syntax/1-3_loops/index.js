@@ -12,6 +12,12 @@ console.log('*** Assurance vie ***');
  * 3) Afficher le résultat
  */
 
+let money = 1000;
+
+for (let i = 0.5; i <= 30; i += 0.5) {
+  money += 1.02;
+}
+console.log('money', money);
 /**========================================================================
  *                           Paires
  *========================================================================**/
@@ -21,6 +27,12 @@ console.log('*** Paires ***');
  * 1) Affichez toutes les paires possibles de nombres entre 0 et 9.
  * (1, 2) et (2, 1) sont considérées 2 paires différentes.
  */
+
+for (let i = 1; i < 10; i++) {
+  for (let j = 1; j < 10; j++) {
+    console.log(i, j);
+  }
+}
 
 /**========================================================================
  *                           Carte Bleue
@@ -34,6 +46,17 @@ console.log('*** Carte bleue ***');
  * en vérifiant que l'opération soit toujours possible
  * 4) Combien d'opérations ont pu être effectuées avant de ne plus pouvoir payer ?
  */
+
+let argent = 1000;
+const cout = 30;
+let nb = 0;
+
+while (argent >= cout) {
+  argent -= cout;
+  nb++;
+}
+
+console.log('reste', argent, 'nb', nb);
 
 /**
  * Bonus 1) Comment retrouver le résultat précédent avec une boucle for ?

@@ -14,6 +14,11 @@ console.log('*** Bonjour ***');
  * 2) Utiliser cette fonction avec votre prénom en logguant son résultat
  */
 
+function direBonjour(nom) {
+  return 'Bonjour ' + nom;
+}
+console.log(direBonjour('Romain'));
+
 /**========================================================================
  *                           Somme
  *========================================================================**/
@@ -26,6 +31,11 @@ console.log('*** Somme ***');
  *
  * 2) Utiliser cette fonction sur deux nombres de votre choix
  */
+
+function somme(a, b) {
+  return a + b;
+}
+console.log(somme(4, 5));
 
 /**========================================================================
  *                           Pourcentage
@@ -40,6 +50,11 @@ console.log('*** Pourcentage ***');
  * 2) Utilisez cette fonction sur un nombre de votre choix,
  * et afficher son résultat dans la console
  */
+
+function calculer(nombre, perc) {
+  return nombre * (1 + perc / 100);
+}
+console.log(calculer(100, 20));
 
 /**
  * 3) Modifier la fonction "calculer" pour pouvoir choisir également le pourcentage appliqué
@@ -56,6 +71,17 @@ console.log('*** 1000 ***');
  * - renvoie la somme de tous les entiers entre ces 2 nombres (min et max inclus)
  * - utiliser une boucle for
  */
+
+function megaSomme(min, max) {
+  let total = 0;
+
+  for (let i = min; i <= max; i++) {
+    total += i;
+  }
+  return total;
+}
+
+console.log('Mega somme', megaSomme(4, 9));
 
 /**========================================================================
  *                           [Bonus] Limite
