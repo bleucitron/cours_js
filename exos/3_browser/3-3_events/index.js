@@ -25,6 +25,23 @@ const colors = [
   'orange',
   'purple',
 ];
+const exo1 = document.getElementById('exo1');
+
+function makeExo1() {
+  colors.forEach(function (color, i) {
+    const div = document.createElement('div');
+    div.classList.add('color');
+    div.textContent = i + 1 + '. ' + color;
+    div.style.background = color;
+    exo1.append(div);
+
+    div.addEventListener('click', () => {
+      document.body.style.background = color;
+    });
+  });
+}
+
+makeExo1();
 
 /**========================================================================
  *                           Taille
@@ -38,11 +55,40 @@ console.log('*** Taille ***');
  * en fonction de la position en Y de la souris à l'écran (event.clientY)
  */
 
+function makeExo2() {
+  const exo2 = document.createElement('section');
+  exo2.id = 'exo2';
+  document.body.append(exo2);
+
+  const carre = document.createElement('div');
+  carre.classList.add('square');
+  exo2.append(carre);
+  carre.addEventListener('mousemove', e => {
+    carre.style.width = e.clientX + 'px';
+  });
+}
+
+makeExo2();
+
 /**========================================================================
  *                           Nom
  *========================================================================**/
 console.log('*** Nom ***');
 
+function makeExo3() {
+  const exo3 = document.createElement('section');
+  exo3.id = 'exo3';
+  document.body.append(exo3);
+
+  const h1 = document.querySelector('h1');
+  const input = document.createElement('input');
+  exo3.append(input);
+  input.addEventListener('input', function (e) {
+    h1.textContent = e.target.value;
+  });
+}
+
+makeExo3();
 /**
  * 1) Créez une <section> avec l'id 'exo3', et l'ajouter au body
  * 2) Ajouter un `<input />` à la section 'exo3'
@@ -61,6 +107,28 @@ console.log('*** Clavier ***');
  * lorsque l'on appuie sur CTRL-R (COMMAND-R)
  * 3) Exécutez chacun des 3 premiers exercices lorsque la page est vide en appuyant sur ENTER
  */
+
+document.addEventListener('keydown', function (e) {
+  document.body.style.background = colors[e.key - 1];
+});
+
+document.addEventListener('keydown', function (e) {
+  e.preventDefault();
+  if (e.metaKey && e.key === 'r') {
+    exo1.innerHTML = '';
+    document.querySelector('#exo2').remove();
+    document.querySelector('#exo3').remove();
+  }
+});
+document.addEventListener('keydown', function (e) {
+  e.preventDefault();
+  console.log(e.key);
+  if (document.querySelectorAll('section').length === 1 && e.key === 'Enter') {
+    makeExo1();
+    makeExo2();
+    makeExo3();
+  }
+});
 
 /**========================================================================
  *                           [Bonus] Harry Potter

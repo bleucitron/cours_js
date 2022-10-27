@@ -59,3 +59,9 @@ section {
   object-fit: contain;
   width: 100%;
 }
+
+.square {
+  width: 100px;
+  height: 100px;
+  background: black;
+}
