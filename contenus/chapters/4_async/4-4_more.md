@@ -8,6 +8,10 @@ Une Promesse est un _thenable_, c'est-à-dire qu'on peut écrire `.then()` ou `.
 
 `p.then().then().catch().then()...`
 
+**La valeur promise de `p.then()` est la valeur retournée par le callback du `.then()`**... Cela vaut également pour `.catch()`.
+
+> ... et pareil si on allonge la chaîne.
+
 ```js
 maPromesse.then(function (vp1) {
   console.log('VP1', vp1);

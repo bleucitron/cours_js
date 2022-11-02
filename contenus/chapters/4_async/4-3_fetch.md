@@ -30,6 +30,8 @@ Bien sûr, **`fetch` est asynchrone**.
 - `response.text()` pour lire du texte simple
 - `response.json()` pour lire du JSON
 
+**`response.json()` et `response.json()` sont donc des méthodes qui renvoient des Promesses**, et qu'il faut consommer comme tel.
+
 ```js
 function getLeMonde() {
   return fetch('https://www.lemonde.fr').then(function(response) {
