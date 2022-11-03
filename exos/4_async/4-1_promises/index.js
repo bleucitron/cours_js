@@ -1,6 +1,11 @@
 'use strict';
 console.log('Exos 4-1: Promesses');
 
+// Cette fonction vous renvoie un nombre aléatoire en 0 et n, n étant exclu
+function getRandom(n) {
+  return Math.floor(Math.random() * n);
+}
+
 /**========================================================================
  *                           Aléatoire
  *========================================================================**/
@@ -8,10 +13,9 @@ console.log('*** Aléatoire ***');
 
 /**
  * 1) Créer une Promesse qui renvoie au bout de 2s un nombre entier aléatoire
- * - le nombre doit être entre 0 et 9
+ * - le nombre doit être entre 0 et 9 en utilisant getRandom
  * - si ce nombre est pair, le résoudre
  * - sinon le rejeter
- * Utiliser setTimeout().
  * 2) Consommer la Promesse de 1) pour:
  * - afficher le nombre renvoyé quand elle résoud
  * - logguer un message d'erreur quand elle est rejetée
@@ -22,9 +26,9 @@ console.log('*** Aléatoire ***');
 console.log('*** Calcul aléatoire ***');
 
 /**
- * 1) En se servant de l'exercice précédent, créer une fonction qui renvoie une promesse
- * d'avoir un nombre aléatoire au bout de 2s
- * 2) Créer 3 nombres aléatoires, et calculer leur somme
+ * 1) Créer une fonction getAsyncRandomNb qui renvoie une promesse
+ * d'avoir un nombre aléatoire au bout de 2s. Cette promesse doit toujours résoudre quelque soit le nb.
+ * 2) En se servant de getAsyncRandomNb, créer 3 nombres aléatoires, et calculer leur somme
  */
 
 /**========================================================================
