@@ -1,6 +1,6 @@
-'use strict';
+import { msToYear } from './constants.js';
 
-function computeAge(born, died) {
+export function computeAge(born, died) {
   const end = died ? new Date(died) : new Date();
   const start = new Date(born);
 

@@ -15,6 +15,16 @@ console.log('*** GetJson ***');
  * https://swapi.dev/api/people/6/
  */
 
+function getJson(url) {
+  return fetch(url).then(resp => resp.json());
+}
+
+const p = getJson('https://swapi.dev/api/people/6/');
+
+p.then(data => {
+  console.log('Data', data);
+});
+
 /**========================================================================
  *                          La rebellion
  *========================================================================**/
@@ -24,6 +34,12 @@ console.log('*** La rebellion ***');
  * 1) Chargez les données des 5 premiers personnages Star Wars en parallèle,
  * et affichez leur données
  */
+
+Promise.all(
+  [1, 2, 3, 4, 5].map(id => `https://swapi.dev/api/people/${id}`).map(getJson),
+).then(data => {
+  console.log('All data', data);
+});
 
 /**========================================================================
  *                          [Bonus] Medium

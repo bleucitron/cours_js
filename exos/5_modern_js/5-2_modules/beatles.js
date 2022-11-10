@@ -1,13 +1,11 @@
-'use strict';
-
-const paul = {
+export const paul = {
   firstName: 'Paul',
   familyName: 'McCartney',
   birthDate: '1942-06-19',
   nationality: 'uk',
 };
 
-const john = {
+export const john = {
   firstName: 'John',
   familyName: 'Lennon',
   birthDate: '1940-10-09',
@@ -15,14 +13,14 @@ const john = {
   nationality: 'uk',
 };
 
-const ringo = {
+export const ringo = {
   firstName: 'Richard',
   familyName: 'Starkey',
   birthDate: '1940-07-07',
   nationality: 'uk',
 };
 
-const george = {
+export const george = {
   firstName: 'George',
   familyName: 'Harrison',
   birthDate: '1943-02-25',
@@ -30,9 +28,10 @@ const george = {
   nationality: 'uk',
 };
 
-// export principal
 const theBeatles = {
   name: 'The Beatles',
-  members: [paul, john, ringo, georges],
+  members: [paul, john, ringo, george],
   genre: 'pop-rock',
 };
+
+export default theBeatles;
