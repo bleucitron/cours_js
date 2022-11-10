@@ -88,4 +88,4 @@ Les données IndexedDB peuvent également être purgées par l'utilisateur.
 
 ---
 
-### _À suivre: [Asynchrone](../4_async/index.md)_
+### _À suivre: [Asynchrone](../4_async/ReadMe.md)_

@@ -184,4 +184,4 @@ Au final, tout n'est qu'une histoire de câbles.
 
 ---
 
-#### _La suite: [La navigateur](../3_browser/index.md)_
+#### _La suite: [La navigateur](../3_browser/ReadMe.md)_

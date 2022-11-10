@@ -84,4 +84,4 @@ Promise.allSettled([promesse1, promesse2]).then(function (tableauDesResultats) {
 
 ---
 
-### _À suivre: [JS moderne](../5_modern_js/index.md)_
+### _À suivre: [JS moderne](../5_modern_js/ReadMe.md)_

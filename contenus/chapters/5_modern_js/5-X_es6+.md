@@ -294,9 +294,3 @@ Promise.any([p1, p2, p3]).then(r2 => {
 x || = 10 // on assigne à 10 seulement si x est falsy
 x && = 10 // on assigne à 10 seulement si x est truthy
 ```
-
-# _**À vos claviers !!!**_
-
-Reprendre le code écrit jusque là, et essayer d'utiliser un maximum des syntaxes modernes.
-
-#### _La suite: [Back to the future](../3_tooling/3-1_future.md)_

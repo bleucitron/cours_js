@@ -130,4 +130,4 @@ Toutes les dépendances d'un script `"module"` seront directement importées en 
 - Suivre les indications du fichier `index.js`, et vérifier les résultats dans votre navigateur
 
 
-### _À suivre: [Outillage](../6_tooling/index.md)_
+### _À suivre: [Outillage](../6_tooling/ReadMe.md)_
