@@ -67,7 +67,7 @@ const date = game.released;
 const other = {
   studio: game.studio,
   genre: game.genre,
-  platforms: ['pc', 'mac'],
+  platforms: game.platforms,
 };
 
 const firstYear = years[0];
@@ -118,14 +118,14 @@ const paul = {
  */
 
 function clone(personne, nbAnnees) {
+  if (nbAnnees === undefined) {
+    nbAnnees = 1;
+  }
+
   console.log('Nom', personne.nom);
   console.log('Prénom', personne.prenom);
   console.log('Âge', personne.age);
   console.log('nbAnnees', nbAnnees);
-
-  if (!nbAnnees) {
-    nbAnnees = 1;
-  }
 
   const leClone = {
     nom: personne.nom,

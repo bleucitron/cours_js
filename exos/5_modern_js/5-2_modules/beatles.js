@@ -33,6 +33,6 @@ const george = {
 // export principal
 const theBeatles = {
   name: 'The Beatles',
-  members: [paul, john, ringo, georges],
+  members: [paul, john, ringo, george],
   genre: 'pop-rock',
 };
