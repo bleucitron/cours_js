@@ -8,7 +8,7 @@ Créez une petite application qui utilise un `<input />` pour récupérer du tex
 - Enregistrer le texte entré dans le `localStorage`, et le lire depuis le `localStorage` au chargement de la page pour afficher directement les `<div>`
 
 
-Conseils:
+Règles:
 - à chaque input, supprimer toutes les `<div />`, et toutes les regénérer
 - prévoir 3 ou 4 classes CSS pour la taille de police, idem pour la graisse de police
-- ne pas toucher au `<body>` du HTML
+- ne rien ajouter au `<body>` dans le HTML
