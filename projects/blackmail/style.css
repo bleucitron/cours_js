@@ -1,0 +1,39 @@
+section {
+  display: flex;
+}
+
+.letter {
+  margin-inline: 1rem;
+}
+
+.font-2 {
+  font-size: 2rem;
+}
+
+.font-3 {
+  font-size: 3rem;
+}
+
+.font-4 {
+  font-size: 4rem;
+}
+
+.font-5 {
+  font-size: 5rem;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-800 {
+  font-weight: 800;
+}
+
+.weight-1000 {
+  font-weight: 1000;
+}

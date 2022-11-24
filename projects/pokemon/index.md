@@ -17,7 +17,7 @@ const url = `https://pokeapi.co/api/v2/`
 
 Conseils:
 - utiliser le endpoint `/generation/{id}` pour avoir les infos d'une génération
-- les infos d'une génération contiennent des infos partielles sur les `pokemon_species` de la génération
+- les infos d'une génération contiennent des infos partielles sur les `pokemon-species` de la génération
 - utiliser le endpoint `/pokemon/{name}` pour avoir les infos d'un spécimen (utile pour l'`image`)
-- utiliser le endpoint `/pokemon_species/{name}` pour avoir les infos complètes d'une espèce
+- utiliser le endpoint `/pokemon-species/{name}` pour avoir les infos complètes d'une espèce
 - une interface visuelle n'est pas demandée
