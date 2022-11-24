@@ -102,4 +102,4 @@ Pour obtenir de l'information sur la taille de ses paquets.
 
 ---
 
-### _À suivre: [Format](./6-4_clean.md)_
+### _À suivre: [Bundling](./6-2_bundling.md)_

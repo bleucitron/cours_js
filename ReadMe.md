@@ -53,9 +53,9 @@
 ## [6. Outillage](./contenus/chapters/6_tooling/ReadMe.md)
 
 - #### [Retour vers le futur](./contenus/chapters/6_tooling/6-0_back_to_the_future.md)
-- #### [Bundling](./contenus/chapters/6_tooling/6-1_bundling.md)
-- #### [DX](./contenus/chapters/6_tooling/6-2_dx.md)
-- #### [NPM](./contenus/chapters/6_tooling/6-3_npm.md)
+- #### [NPM](./contenus/chapters/6_tooling/6-1_npm.md)
+- #### [Bundling](./contenus/chapters/6_tooling/6-2_bundling.md)
+- #### [DX](./contenus/chapters/6_tooling/6-3_dx.md)
 - #### [Mr Propre](./contenus/chapters/6_tooling/6-4_clean.md)
 - #### [Tests](./contenus/chapters/6_tooling/6-5_tests.md)
 

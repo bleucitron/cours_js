@@ -47,4 +47,4 @@ maFonctionDuFuture() // ok
 ```
 
 
-### _À suivre: [Bundling](./6-1_bundling.md)_
+### _À suivre: [NPM](./6-1_npm.md)_

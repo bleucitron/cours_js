@@ -104,4 +104,4 @@ TODO
 
 ---
 
-### _À suivre: [DX](./6-2_dx.md)_
+### _À suivre: [DX](./6-3_dx.md)_
