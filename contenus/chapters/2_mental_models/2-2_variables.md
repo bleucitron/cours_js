@@ -131,7 +131,7 @@ x = 0;
 
 # _**À vos crayons !!!**_
 
-- Faire les exercices du fichier [`/exos/1-3_variables.md`](../../../exos/1_mental_models/1-3_variables.md)
+- Faire les exercices du fichier [`/exos/2-3_variables.md`](../../../exos/2_mental_models/2-2_variables.md)
 
 ---
 
